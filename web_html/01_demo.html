@@ -1,0 +1,52 @@
+<!-- 文档声明: 告诉浏览器这是一个html文件 -->
+<!DOCTYPE html>
+<!-- html的最外层标签: 包裹着所有html代码, lang="en" - 英文网站, lang="zh-CN" - 中文网站 -->
+<html lang="en">
+
+<head>
+     <!-- 源信息: 是编写网页中的一些辅助信息 -->
+     <meta charset="UTF-8">
+     <!-- 设置网页的标题 -->
+     <title>HTML+CSS教程</title>
+</head>
+
+<body>
+     <!-- 显示网页内容的区域 -->
+     <div>点我变色</div>
+</body>
+
+</html>
+
+<!-- 样式 CSS -->
+<style>
+     div {
+          color: red;
+          font-style: italic;
+     }
+</style>
+
+<!-- 结构 HTML -->
+<!-- <div>点我变色</div> -->
+
+<!-- 行为 JavaScript -->
+<script>
+     let div = document.querySelector('div');
+     let timer = null;
+     let flag = true;
+     div.onmouseover = function () {
+          timer = setInterval(() => {
+               if (flag) {
+                    div.style.color = 'blue';
+                    div.style.fontStyle = 'normal';
+               } else {
+                    div.style.color = 'red';
+                    div.style.fontStyle = 'italic';
+               }
+               flag = !flag;
+          }, 500);
+     };
+     div.onmouseout = function () {
+          clearInterval(timer);
+     };
+
+</script>
