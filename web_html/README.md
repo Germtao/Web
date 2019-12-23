@@ -193,3 +193,32 @@
 - `select`、`option`: 下拉菜单
 
 - `label`: 辅助表单
+
+### 表单表格组合例子
+
+```
+<form action="">
+     <table border="1" cellpadding="30">
+          <tbody>
+               <tr align="center">
+                    <td rowspan="4">个人信息</td>
+                    <td colspan="2">用户注册</td>
+               </tr>
+               <tr align="right">
+                    <td>用户名:</td>
+                    <td><input type="text" placeholder="请输入用户名"></td>
+               </tr>
+               <tr align="right">
+                    <td>密码:</td>
+                    <td><input type="password" placeholder="请输入密码"></td>
+               </tr>
+               <tr align="center">
+                    <td colspan="2">
+                         <input type="submit">&nbsp;&nbsp;&nbsp;&nbsp;
+                         <input type="reset">
+                    </td>
+               </tr>
+          </tbody>
+     </table>
+</form>
+```
