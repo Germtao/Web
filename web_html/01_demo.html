@@ -238,8 +238,8 @@
                </strong><br />
                <strong>
                     单选框：<br />
-                    <input type="radio">男
-                    <input type="radio">女
+                    <input type="radio" name="gender">男
+                    <input type="radio" name="gender">女
                </strong><br />
                <strong>
                     上传文件：<br />
@@ -249,7 +249,34 @@
                     提交和重置：<br />
                     <input type="submit">
                     <input type="reset">
-               </strong>
+               </strong><br />
+               <strong>
+                    多行文本框：<br />
+                    <textarea cols="30" rows="10"></textarea>
+               </strong><br />
+               <h3>下拉菜单：</h3>
+               <select>
+                    <option selected disabled>请选择</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>广州</option>
+                    <option>深圳</option>
+               </select>
+               <select size="3">
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>广州</option>
+                    <option>深圳</option>
+               </select>
+               <select multiple>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>广州</option>
+                    <option>深圳</option>
+               </select>
+
+               <input type="radio" name="gender" id="man"><label for="man">男</label>
+               <input type="radio" name="gender" id="feman"><label for="feman">女</label>
           </form>
      </body>
 

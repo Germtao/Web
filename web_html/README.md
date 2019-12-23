@@ -188,4 +188,8 @@
 |submit|提交按钮|
 |reset|重置按钮|
 
+- `textarea`: 多行文本框
 
+- `select`、`option`: 下拉菜单
+
+- `label`: 辅助表单
