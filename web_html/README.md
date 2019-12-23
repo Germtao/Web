@@ -56,3 +56,15 @@
 
 - `width`、`height`: 图片大小
 
+### 引入文件的地址路径
+
+- 相对路径
+
+     `.`: 当前路径
+     `..`: 上一级路径
+
+- 绝对路径
+
+     E:/xx/xx/xx/xx.xx
+     http://pic-bucket.ws.126.net/photo/0001/2019-12-23/F127J1SV00AN0001NOS.jpg
+
