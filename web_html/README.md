@@ -68,3 +68,13 @@
      E:/xx/xx/xx/xx.xx
      http://pic-bucket.ws.126.net/photo/0001/2019-12-23/F127J1SV00AN0001NOS.jpg
 
+### 链接标签
+
+`<a></a>`
+
+- `href`: 链接地址
+
+- `target`: 链接打开的方式, `_self`(默认)当前页打开, `_blank` 新窗口打开
+
+- `base`: 统一设置链接打开方式, header中设置
+
