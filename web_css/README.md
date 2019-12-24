@@ -167,6 +167,21 @@ CSS 文本属性可定义文本的外观。
 |lowercase|全小写|
 |capitalize|首字母大写|
 
+- `text-indent`
+
+    文本缩进， 针对首行，单位`em`或百分比%。
+
+- `text-align`: 对齐方式
+
+|值|描述|
+|---|---|
+|left、start|默认，左对齐|
+|right、end|右对齐|
+|center|居中|
+|justify|两端对齐|
+
+
+
 
 
 
