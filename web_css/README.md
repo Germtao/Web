@@ -1,5 +1,7 @@
 # CSS
 
+[CSS参考手册](https://www.w3school.com.cn/cssref/index.asp)
+
 ## 基础语法
 
 > 选择器 { 属性1: 值1; 属性2: 值2 }
@@ -42,4 +44,71 @@ div {
 |`<center>`|对文本进行水平居中。不赞成使用。请使用样式|
 
 更多请参考[CSS教程](https://www.w3school.com.cn/css/index.asp)。
+
+## CSS 样式
+
+### 背景属性
+
+|属性|描述|
+|:---:|:---:|
+|background|简写属性，作用是将背景属性设置在一个声明中|
+|background-color|背景颜色|
+|background-image|背景图|
+|background-position|背景图片的位置|
+|background-repeat|背景图片的平铺方式|
+|background-attachment|背景图随滚动条的移动方式|
+
+- 背景色
+
+    `background-color`
+
+- 背景图
+
+    `background-image` 必须为这个属性设置一个`URL`值
+
+- 背景平铺
+
+    `background-repeat`
+
+    1. `repeat-x` x轴平铺
+    2. `repeat-y` y轴平铺
+    3. `repeat` x、y轴均平铺，默认
+    4. `no-repeat` 不允许平铺
+
+- 背景位置
+
+    `background-position`
+
+    **关键字**
+
+    |单一关键字|等价关键字|
+    |:---:|:---:|
+    |center|center center|
+    |top|top center 或 center top|
+    |bottom|bottom center 或 center bottom|
+    |right|right center 或 center right|
+    |left|left center 或 center left|
+
+    **百分数值** 
+
+    百分数值同时应用于元素和图像
+
+    `background-position:50% 50%;`
+
+    **长度值**
+
+    长度值解释的是元素内边距区左上角的偏移, 偏移点是图像的左上角
+
+    `background-position: 100px 0;`
+
+- 背景图随滚动条的移动方式
+
+    `background-attachment`
+
+    scroll: 默认 (背景位置是根据当前元素进行偏移的)
+    fixed: (背景位置是根据浏览器进行偏移的)
+
+
+
+
 
