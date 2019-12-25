@@ -112,6 +112,33 @@ div {
     scroll: 默认 (背景位置是根据当前元素进行偏移的)
     fixed: (背景位置是根据浏览器进行偏移的)
 
+---
+
+## CSS框模型
+
+### 边框
+
+元素的边框`(border)`是围绕元素内容和内边距的一条或多条线。
+
+CSS border 属性设置元素边框的样式、宽度和颜色。
+
+[CSS边框属性](https://www.w3school.com.cn/css/css_border.asp)
+
+- 边框的样式
+
+    `border-style`: 
+
+   - `solid`: 实线
+   - `dotted`: 点
+   - `dashed`: 虚线
+   - `double`: 双线
+
+   **定义多种样式**
+
+
+
+
+
 
 
 
