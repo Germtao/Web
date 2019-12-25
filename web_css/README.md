@@ -192,7 +192,19 @@ CSS 文本属性可定义文本的外观。
 
     字（单词）之间的间隔 (针对英文段落)
 
+## CSS 复合样式
 
+    有的不需要关心顺序，有的是需要(font)
+
+- `background: red url(李沁.jpg) no-repeat center center;
+- `border-bottom: dashed 2px blue;` `/* border: solid 2px black; */`
+- `font: 2em 宋体;`
+    至少需要2个值 (size family)
+    - weight style size family ✅
+    - style weight size family ✅
+    - weight style size/line-height family ✅
+
+> 注🐷: `单一样式`和`复合样式`尽量不要混写，如果非要混写，先复合再单一。
 
 
 
