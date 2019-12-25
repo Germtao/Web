@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>css - 字体和文本</title>
+     <style>
+          h1 {
+               font-family: Georgia, serif;
+          }
+
+          p {
+               /* 字体 */
+               font-family: 'Times New Roman', Times, serif;
+               /* 推荐使用em (另外两种px、%) */
+               font-size: 1.8em;
+               font-weight: bold;
+               font-style: oblique;
+          }
+
+          /* 文本装饰 */
+          #underline {
+               text-decoration: underline;
+          }
+
+          #overline {
+               text-decoration: overline;
+          }
+
+          #line-through {
+               text-decoration: line-through;
+          }
+
+          #lineall {
+               text-decoration: underline overline line-through;
+          }
+
+          /* 文本大小写 */
+          #uppercase {
+               text-transform: uppercase;
+          }
+
+          #lowercase {
+               text-transform: lowercase;
+          }
+
+          #capitalize {
+               text-transform: capitalize;
+          }
+
+          /* 文本缩进 */
+          p.indent {
+               text-indent: 2em;
+          }
+
+          p.align {
+               text-align: center;
+          }
+     </style>
+</head>
+
+<body>
+     <h1>这是一段文字</h1>
+     <p>这是一段文字</p>
+     <h1>This is a text</h1>
+     <p>This is a text</p>
+
+     <!-- 文本装饰 -->
+     <p id="underline">文本修饰-下划线</p>
+     <p id="overline">文本修饰-上划线</p>
+     <p id="line-through">文本修饰-贯穿线</p>
+     <p id="lineall">文本修饰-贯穿线</p>
+
+     <!-- 文本大小写 -->
+     <p id="uppercase">this is a text tHiS iS a tEXt ThiS is a text tHiS iS a tEXt this is a text tHiS iS a tEXt</p>
+     <p id="lowercase">this is a text tHiS iS a tEXt ThiS is a text tHiS iS a tEXt this is a text tHiS iS a tEXt</p>
+     <p id="capitalize">this is a text tHiS iS a tEXt ThiS is a text tHiS iS a tEXt this is a text tHiS iS a tEXt</p>
+
+     <!-- 文本缩进 -->
+     <p class="indent">首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进首行文本缩进</p>
+
+     <!-- 对齐方式 -->
+     <p class="align">文本对齐方式</p>
+</body>
+
+</html>
