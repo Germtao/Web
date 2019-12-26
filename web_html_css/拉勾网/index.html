@@ -7,6 +7,7 @@
 			/* 清除默认样式 */
 			li {list-style: none;}
 			a {text-decoration: none; color: #000;}
+			input {border: none;}
 			
 			/* 共同样式 */
 			.main {
@@ -125,6 +126,57 @@
 				background: darkcyan;
 			}
 			
+			.header .h_bottom .bottom_content .bottom_content_left {
+				/* 整个作为参考物 */
+				position: relative; 
+				width: 556px;
+				height: 120px;
+				background: red;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_left .bottom_content_left_bg {
+				width: 226px;
+				height: 100%;
+				background: white;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_left .imgBox {
+				position: absolute; 
+				left: 232px;
+				top: 12px;
+				font-size: 20px;
+				color: white;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_left .txtBox {
+				position: absolute; 
+				left: 232px;
+				top: 56px;
+				font-size: 12px;
+				color: white;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_right {
+				width: 454px;
+				height: 100%;
+				background: pink;
+				position: relative;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_right .bottom_content_right_box {
+				width: 100%;
+				height: 36px;
+				background: red;
+				position: absolute;
+				top: 50%;
+				margin-top: -18px;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_right .bottom_content_right_box .inputPhone {
+				width: 163px;
+				height: 36px;
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -157,8 +209,25 @@
 					</div>
 				</div>
 				<div class="h_bottom">
-					<div class="bottom_content main">
+					<div class="bottom_content main clearFixed">
+						<div class="bottom_content_left fl clearFixed">
+							<div class="bottom_content_left_bg fl">
+								226px * 120px
+							</div>
+							<div class="bottom_content_left_txt fr">
+								<p class="imgBox">去互联网好公司工作，就上拉勾</p>
+								<p class="txtBox">755585家公司|67677676个职位在拉勾等你</p>
+							</div>
+						</div>
 						
+						<div class="bottom_content_right fr">
+							<div class="bottom_content_right_box">
+								<input type="text" placeholder="输入手机号" class="inputPhone" />
+								<input type="text" placeholder="验证码" class="inputCode" />
+								<a href="#">获取</a>
+								<input type="submit" value="登录/注册" class="inputBtn" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
