@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 清除默认样式 */
+			li {list-style: none;}
+			a {text-decoration: none; color: #000;}
+			
+			/* 共同样式 */
+			.main {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			
+			/* 浮动选择器 */
+			.fl {float: left;}
+			.fr {float: right;}
+			.clearFixed:after { content: ""; display: block; clear: both; }
+			
+			.header {
+				height: 160px;
+			}
+			
+			.header .h_top {
+				height: 40px;
+				background: #32373e;
+			}
+			.header .h_top .top_content {
+				height: 40px;
+			}
+			.header .h_top .top_content .top_content_left {
+				height: 40px;
+				line-height: 40px;
+			}
+			.header .h_top .top_content .top_content_left .leftText1 {
+				height: 40px;
+			}
+			.header .h_top .top_content .top_content_left .leftText1 .logo {
+				font-size: 22px;
+				color: #00B38A;
+				margin-right: 32px;
+			}
+			.header .h_top .top_content .top_content_left .leftText1 .city {
+				font-size: 12px;
+				color: #00B38A;
+				margin-right: 14px;
+			}
+			.header .h_top .top_content .top_content_left .leftText1 .switchCity {
+				font-size: 12px;
+				color: #afb5c0;
+			}
+			.header .h_top .top_content .top_content_left .ulList {
+				margin-top: auto;
+				font-size: 14px;
+			}
+			.header .h_top .top_content .top_content_left .ulList li {
+				float: left;
+				width: 60px;
+				text-align: center;
+			}
+			.header .h_top .top_content .top_content_left .ulList li a {
+				color: #a3b5a7;
+			}
+			.header .h_top .top_content .top_content_left .ulList li:first-child {
+				background: #24282c;
+			}
+			.header .h_top .top_content .top_content_left .ulList li:first-child a {
+				color: white;
+			}
+			.header .h_top .top_content .top_content_right {
+				height: 40px;
+				padding-right: 8px;
+			}
+			.header .h_top .top_content .top_content_right .ulList {
+				margin-top: auto;
+				line-height: 40px;
+				font-size: 12px;
+				padding-left: 0px;
+			}
+			.header .h_top .top_content .top_content_right .ulList li {
+				float: left;
+			}
+			.header .h_top .top_content .top_content_right .ulList li .login {
+				color: #93b5c0;
+			}
+			.header .h_top .top_content .top_content_right .ulList .imgBtn span {
+				width: 19px;
+				height: 19px;
+				margin-top: 10px;
+				float: left;
+			}
+			.header .h_top .top_content .top_content_right .ulList .login span {
+				background-image: url(./img/avatar.svg);
+				margin-right: 10px;
+			}
+			.header .h_top .top_content .top_content_right .ulList .app {
+				color: #08d7a2;
+				margin-right: 24px;
+			}
+			.header .h_top .top_content .top_content_right .ulList .app span {
+				background-image: url(./img/phone.svg);
+			}
+			.header .h_top .top_content .top_content_right .ulList li .register {
+				margin-right: 40px;
+				color: #93b5c0;
+			}
+			.header .h_top .top_content .top_content_right .ulList li .register span {
+				padding: 0 12px;
+			}
+			.header .h_top .top_content .top_content_right .ulList li a {
+				display: block;
+			}
+			.header .h_top .top_content .top_content_right .ulList li:last-child a {
+				color: #93b5c0;
+			}
+			
+			.header .h_bottom {
+				height: 120px;
+				background: #00b38a;
+			}
+			.header .h_bottom .bottom_content {
+				height: 120px;
+				background: darkcyan;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="header">
+				<div class="h_top">
+					<div class="top_content main clearFixed">
+						<div class="top_content_left fl clearFixed">
+							<div class="leftText1 fl">
+								<a href="#" class="logo">拉勾</a>
+								<a href="#" class="city">全国站</a>
+								<a href="#" class="switchCity">[切换城市]</a>
+							</div>
+							<ul class="ulList clearFixed fl">
+								<li><a href="#">首页</a></li>
+								<li><a href="#">公司</a></li>
+								<li><a href="#">校园</a></li>
+								<li><a href="#">言职</a></li>
+								<li><a href="#">课程</a></li>
+							</ul>
+						</div>
+						<div class="top_content_right fr">
+							<ul class="ulList clearFixed">
+								<li><a href="#" class="imgBtn login"><span></span>登录</a></li>
+								<li><a href="#" class="register"><span>|</span>注册</a></li>
+								<li><a href="#" class="imgBtn app"><span></span>拉勾APP</a></li>
+								<li><a href="#">进入企业版</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="h_bottom">
+					<div class="bottom_content main">
+						
+					</div>
+				</div>
+			</div>
+			<div class="search">
+				
+			</div>
+			<div class="banner">
+					
+			</div>
+			<div class="content">
+				
+			</div>
+			<div class="footer">
+				
+			</div>
+		</div>
+	</body>
+</html>
