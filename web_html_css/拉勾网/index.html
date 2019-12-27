@@ -123,7 +123,6 @@
 			}
 			.header .h_bottom .bottom_content {
 				height: 120px;
-				background: darkcyan;
 			}
 			
 			.header .h_bottom .bottom_content .bottom_content_left {
@@ -131,7 +130,6 @@
 				position: relative; 
 				width: 556px;
 				height: 120px;
-				background: red;
 			}
 			
 			.header .h_bottom .bottom_content .bottom_content_left .bottom_content_left_bg {
@@ -157,24 +155,52 @@
 			}
 			
 			.header .h_bottom .bottom_content .bottom_content_right {
-				width: 454px;
+				width: 456px;
 				height: 100%;
-				background: pink;
 				position: relative;
 			}
 			
 			.header .h_bottom .bottom_content .bottom_content_right .bottom_content_right_box {
 				width: 100%;
 				height: 36px;
-				background: red;
 				position: absolute;
 				top: 50%;
 				margin-top: -18px;
+				color: #757575;
+				font-size: 12px;
 			}
 			
 			.header .h_bottom .bottom_content .bottom_content_right .bottom_content_right_box .inputPhone {
 				width: 163px;
+				height: 34px;
+				margin-right: 25px;
+				text-indent: 12px;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_right .bottom_content_right_box .pBox {
+				width: 148px;
 				height: 36px;
+				margin-top: 0;
+				margin-right: 12px;
+				background: white;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_right .bottom_content_right_box .pBox .inputCode {
+				width: 94px;
+				height: 34px;
+				text-indent: 12px;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_right .bottom_content_right_box .pBox .aText {
+				padding: 9px 6px 8px;
+				color: #00B38A;
+			}
+			
+			.header .h_bottom .bottom_content .bottom_content_right .bottom_content_right_box .inputBtn {
+				width: 106px;
+				height: 36px;
+				border: 1px solid #ccefe7;
+				background: transparent;
 			}
 			
 		</style>
@@ -221,11 +247,14 @@
 						</div>
 						
 						<div class="bottom_content_right fr">
-							<div class="bottom_content_right_box">
-								<input type="text" placeholder="输入手机号" class="inputPhone" />
-								<input type="text" placeholder="验证码" class="inputCode" />
-								<a href="#">获取</a>
-								<input type="submit" value="登录/注册" class="inputBtn" />
+							<div class="bottom_content_right_box clearFixed">
+								<input type="text" placeholder="输入手机号" class="inputPhone fl" />
+								<p class="fl pBox">
+									<input type="text" placeholder="验证码" class="inputCode" />
+									|
+									<a href="#" class="aText">获取</a>
+								</p>
+								<input type="submit" value="登录/注册" class="inputBtn fl" />
 							</div>
 						</div>
 					</div>
