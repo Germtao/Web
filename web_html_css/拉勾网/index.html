@@ -20,6 +20,7 @@
 			.fr {float: right;}
 			.clearFixed:after { content: ""; display: block; clear: both; }
 			
+			/* 头部样式 */
 			.header {
 				height: 160px;
 			}
@@ -201,6 +202,59 @@
 				height: 36px;
 				border: 1px solid #ccefe7;
 				background: transparent;
+				color: #ccefe7;
+			}
+			
+			/* 搜索样式 */
+			.search {
+				height: 132px;
+				background: #f2f5f4;
+			}
+			
+			.search_content {
+				height: 102px;
+				padding-top: 30px;
+			}
+			
+			.search_bar {
+				width: 937px;
+				height: 50px;
+				margin-left: 132px;
+			}
+			
+			.search_bar_input {
+				font-size: 14px;
+				width: 794px;
+				height: 46px;
+				border: 1px solid #e8e8e8;
+				text-indent: 10px;
+			}
+			
+			.search_bar_button {
+				font-size: 18px;
+				width: 139px;
+				height: 49px;
+				line-height: 49px;
+				text-align: center;
+				background: #00b38a;
+				color: white;
+			}
+			
+			.search .search_content .serach_list {
+				margin-left: 132px;
+				padding-left: 0px;
+				font-size: 12px;
+				line-height: 38px;
+			}
+			
+			.search .search_content .serach_list li:first-child a {
+				color: #757575;
+				padding: 0;
+			}
+			
+			.search .search_content .serach_list li a {
+				color: #00c1cc;
+				padding: 0 11px;
 			}
 			
 		</style>
@@ -261,7 +315,22 @@
 				</div>
 			</div>
 			<div class="search">
-				
+				<div class="search_content main">
+					<div class="search_bar clearFixed">
+						<input type="text" name="" id="" value="" placeholder="搜索职位、公司或地点" class="search_bar_input fl" />
+						<a href="" class="search_bar_button fl">搜索</a>
+					</div>
+					<ul class="serach_list clearFixed">
+						<li class="fl"><a href="#">热门搜索：</a></li>
+						<li class="fl"><a href="#">24小时极速入职</a></li>
+						<li class="fl"><a href="#">名企校招早班车</a></li>
+						<li class="fl"><a href="#">java面试</a></li>
+						<li class="fl"><a href="#">架构设计</a></li>
+						<li class="fl"><a href="#">数据分析</a></li>
+						<li class="fl"><a href="#">PHP</a></li>
+						<li class="fl"><a href="#">C++</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="banner">
 					
