@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<p>{{counter}}</p>
+			<button v-on:click="increment">+</button>
+			<!-- 语法糖 @click == v-on:click -->
+			<button @click="subtraction">-</button>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<script>
+			const app = new Vue({
+				el: '#app',
+				data: {
+					counter: 0
+				},
+				methods: {
+					increment() {
+						console.log(event);
+						this.counter++
+					},
+					
+					subtraction() {
+						this.counter--
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
