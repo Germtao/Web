@@ -15,6 +15,7 @@
 			<!-- 双括号中可以有 简单的表达式 -->
 			<p>{{firstName + ' ' + lastName}}</p>
 			<p>{{firstName}} {{lastName}}</p>
+			<p>{{fullName}}</p>
 			
 			<h1>指令</h1>
 			<p>会改变: {{message}}</p>
@@ -55,6 +56,12 @@
 					
 					active1: 'aaaa',
 					line1: 'bbbb'
+				},
+				// 计算属性
+				computed: {
+					fullName: function () {
+						return this.firstName + ' ' + this.lastName
+					}
 				},
 				methods: {
 					btnClick: function () {
