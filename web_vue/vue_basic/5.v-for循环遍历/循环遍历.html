@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<!-- 遍历数组 -->
+			<ul>
+				<!-- 1. 不取索引 -->
+				<li v-for="movie in movies">{{movie}}</li>
+			</ul>
+			<ul>
+				<!-- 2. 取索引 -->
+				<li v-for="(movie, index) in movies">{{index+1}}. {{movie}}</li>
+			</ul>
+			
+			<!-- 遍历对象 -->
+			<ul>
+				<li v-for="value in info">{{value}}</li>
+			</ul>
+			<ul>
+				<li v-for="(value, key) in info">{{key}}: {{value}}</li>
+			</ul>
+			
+			<!-- 数组中哪些方法是响应式的 -->
+			<ul>
+				<!-- :key - 绑定key值，使内部性能更高 -->
+				<li v-for="item in letters" :key="item">{{item}}</li>
+			</ul>
+			<button @click="buttonClick">操作数组</button>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<script>
+			const app = new Vue({
+				el: '#app',
+				data: {
+					movies: ['星际穿越', '大话西游', '盗梦空间', '东邪西毒'],
+					info: {
+						name: 'Kebo Byrant',
+						age: 40,
+						height: 198
+					},
+					letters: ['a', 'b', 'c', 'd', 'e', 'f']
+				},
+				methods: {
+					buttonClick() {
+						// 响应式方法
+						// 1. push
+						// this.letters.push('ggg') // ('ggg', 'hhh', 'iii')
+						
+						// 2. pop - 删除末位
+						// this.letters.pop()
+						
+						// 3. shift - 删除首位
+						// this.letters.shift()
+						
+						// 4. unshift - 首位添加元素
+						// this.letters.unshift('jjj')
+						// this.letters.unshift('jjj', 'iii')
+						
+						// 5. splice - 作用: 删除元素、插入元素、替换元素
+						// 5.1 删除元素: 第二个参数传入要删除几个元素(不传, 就删除后面所有元素)
+						// this.letters.splice(1, this.letters.length - 2)
+						// 5.2 替换元素: 后面是用于替换的元素
+						// this.letters.splice(2, 3, 'm', 'n', 'o')
+						// 5.3 插入元素:
+						// this.letters.splice(1, 0, 'l', 'm', 'n')
+						
+						// 6. sort - 排序
+						// this.letters.sort()
+						
+						// 7. reverse - 倒序
+						this.letters.reverse()
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
