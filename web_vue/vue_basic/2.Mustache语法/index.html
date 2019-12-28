@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.active { color: red; }
+		</style>
+	</head>
+	<body>
+		
+		<div id="app">
+			<h1>插值</h1>
+			<p>{{message}}</p>
+			<!-- 双括号中可以有 简单的表达式 -->
+			<p>{{firstName + ' ' + lastName}}</p>
+			<p>{{firstName}} {{lastName}}</p>
+			
+			<h1>指令</h1>
+			<p>会改变: {{message}}</p>
+			<p v-once>不会改变: {{message}}</p>
+			<p v-html="url"></p>
+			<p>
+				<img v-bind:src="imgUrl">
+				<!-- 语法糖: 缩写 -->
+				<a :href="aHref">百度一下</a>
+			</p>
+			<p>
+				<!-- 绑定对象 -->
+				<span v-bind:class="{active: isActive, line: isLine}">{{message}}</span>
+				<span v-bind:class="classes()">{{message}}</span>
+				<button v-on:click="btnClick">点击变色</button>
+				
+				<!-- 绑定数组（用的少） -->
+				<span :class="['active1', 'line1']">{{message + active1}}</span>
+				<span :class="arrClass()">{{message + active1}}</span>
+			</p>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<script>
+			const app = new Vue({
+				el: '#app',
+				data: {
+					message: 'Hello Vue!',
+					firstName: 'Kobe',
+					lastName: 'Bryant',
+					url: '<a href="https://www.baidu.com">百度一下</a>',
+					imgUrl: 'https://s3.amazonaws.com/creativetim_bucket/products/94/original/opt_nuk_vue_thumbnail_%281%29.jpg?1535015651',
+					aHref: 'https://www.baidu.com',
+					
+					isActive: false,
+					isLine: false,
+					
+					active1: 'aaaa',
+					line1: 'bbbb'
+				},
+				methods: {
+					btnClick: function () {
+						this.isActive = !this.isActive
+					},
+					classes: function () {
+						return {active: this.isActive, line: this.isLine}
+					},
+					arrClass: function () {
+						return [this.active1, this.line1]
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
