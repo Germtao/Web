@@ -6,10 +6,26 @@
 	</head>
 	<body>
 		<div id="app">
-			<p>{{counter}}</p>
-			<button v-on:click="increment">+</button>
-			<!-- 语法糖 @click == v-on:click -->
-			<button @click="subtraction">-</button>
+			<div @click="divClick">
+				<p>{{counter}}</p>
+				<!-- 1. 修饰符: .stop 阻止冒泡 -->
+				<button v-on:click.stop="increment">+</button>
+				<!-- 语法糖 @click == v-on:click -->
+				<button @click.stop="subtraction">-</button>
+			</div>
+			
+			<br />
+			
+			<!-- 2. 修饰符: .prevent 阻止默认事件 -->
+			<form method="post">
+				<input type="submit" value="提交" @click.prevent="submitClick"/>
+				
+				<!-- 3. 修饰符: 监听某个键盘的键帽 -->
+				<input type="text" @keyup.enter="keyup" />
+			</form>
+			
+			<!-- 4. 修饰符: .once 点击事件将只会触发一次 -->
+			<button @click.once="onceClick">onceButton</button>
 		</div>
 		
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -22,12 +38,28 @@
 				},
 				methods: {
 					increment() {
-						console.log(event);
+						console.log('increment');
 						this.counter++
 					},
 					
 					subtraction() {
 						this.counter--
+					},
+					
+					divClick() {
+						console.log('divClick')
+					},
+					
+					submitClick() {
+						console.log('submitClick')
+					},
+					
+					keyup() {
+						console.log('keyup')
+					},
+					
+					onceClick() {
+						console.log('onceClick')
 					}
 				}
 			})
