@@ -15,7 +15,8 @@
 		<!-- 1. script标签 -->
 		<script type="text/template" id="component1">
 			<div>
-				<h2>script标签模板抽离</h2>
+				<!-- <h2>script标签模板抽离</h2> -->
+				<h2>{{title}}</h2>
 				<p>我是内容...</p>
 			</div>
 		</script>
@@ -32,7 +33,13 @@
 		<script type="text/javascript">
 			
 			Vue.component('component1', {
-				template: '#component1'
+				template: '#component1',
+				// 每个组件有自己数据 data，且data必须是函数
+				data() {
+					return {
+						title: 'abc'
+					}
+				}
 			})
 			
 			const app = new Vue({
