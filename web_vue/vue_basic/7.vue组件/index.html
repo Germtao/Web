@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			// 3. 使用组件
+			<my-component></my-component>
+			<my-component></my-component>
+			<my-component></my-component>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script>
+			
+			// 1. 创建组件构造器
+			const myComponent = Vue.extend({
+				template: `
+					<div>
+						<h2>我是标题</h2>
+						<p>我是内容11111...</p>
+						<p>我是内容22222...</p>
+					</div>
+				`
+			})
+			
+			// 2. 注册组件
+			Vue.component('my-component', myComponent)
+			
+			const app = new Vue({
+				el: '#app',
+			})
+		</script>
+	</body>
+</html>
