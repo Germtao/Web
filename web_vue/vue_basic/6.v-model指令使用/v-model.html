@@ -16,6 +16,47 @@
       <!-- <input type="text" :value="message" @input="valueChange" /> -->
 			<input type="text" :value="message" @input="message = $event.target.value" />
       {{message}}
+			
+			<br />
+			
+			<!-- 单选框 -->
+			<!-- v-model时 name键可以省略 -->
+			<input type="radio" id="male" value="男" v-model="sex"/><label for="male">男</label>
+			<input type="radio" id="female" value="女" v-model="sex"/><label for="female">女</label>
+			<h2>您选择的性别是：{{sex}}</h2>
+			
+			<!-- 复选框 -->
+			<input type="checkbox" id="agreement" v-model="isAgree"/><label for="agreement">同意协议</label>
+			<h2>同意协议：{{isAgree}}</h2>
+			
+			<label>
+				<input type="checkbox" name="" id="basketball" value="🏀" v-model="hobbies"/>🏀
+			</label>
+			<input type="checkbox" name="" id="football" value="⚽️" v-model="hobbies"/>
+			<label for="football">⚽️</label>
+			<input type="checkbox" name="" id="billiard" value="🎱" v-model="hobbies"/>
+			<label for="billiard">🎱</label>
+			<h2>爱好：{{hobbies}}</h2>
+			
+			<!-- 下拉菜单 -->
+			<!-- 1. 单选 -->
+			<select name="abc" v-model="fruit">
+				<option value="香蕉">香蕉</option>
+				<option value="苹果">苹果</option>
+				<option value="草莓">草莓</option>
+				<option value="橙子">橙子</option>
+			</select>
+			<h2>选择的水果：{{fruit}}</h2>
+			
+			<!-- 多选 -->
+			<select name="abc" v-model="fruits" multiple="">
+				<option value="香蕉">香蕉</option>
+				<option value="苹果">苹果</option>
+				<option value="草莓">草莓</option>
+				<option value="橙子">橙子</option>
+			</select>
+			<h2>选择的水果s：{{fruits}}</h2>
+			
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -24,7 +65,12 @@
       const app = new Vue({
         el: "#app",
         data: {
-          message: "Hello v-model!"
+          message: "Hello v-model!",
+					sex: '男',
+					isAgree: false,
+					hobbies: [],
+					fruit: '香蕉',
+					fruits: []
         },
         methods: {
           valueChange(event) {
