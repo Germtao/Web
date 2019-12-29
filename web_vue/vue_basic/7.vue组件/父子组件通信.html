@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			.active {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="app">
+			<!-- :cmovies 不绑定，显示默认值 -->
+			<child-cpn v-bind:cmovies="movies"></child-cpn>
+		</div>
+		
+		<template id="childCpn">
+			<div>
+				<div>
+					<ul>
+						<li v-for="(item, index) in cmovies" 
+								@click="changeColor(index)" 
+								:class="{active: isActive(index)}">
+							{{item}}
+						</li>
+					</ul>
+				</div>
+				<child-cpn2 :cmovies="cmovies"></child-cpn2>
+			</div>
+		</template>
+		
+		<template id="childCpn2">
+			<div>
+				<ul>
+					<li v-for="(item, index) in cmovies" 
+							@click="changeColor(index)" 
+							:class="{active: isActive(index)}">
+						{{item}}
+					</li>
+				</ul>
+			</div>
+		</template>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<script type="text/javascript">
+			
+			// 父传子: props
+			const childCpn2 = {
+				template: '#childCpn2',
+				props: ['cmovies'],
+				data() {
+					return {
+						selectIndex: 2,
+					}
+				},
+				methods: {
+					changeColor(index) {
+						this.selectIndex = index
+					},
+					
+					isActive(index) {
+						return this.selectIndex === index
+					}
+				},
+			}
+			
+			const childCpn = {
+				template: '#childCpn',
+				// props: ['cmovies'],
+				props: {
+					// cmovies: Array,
+					// 指定默认值、类型
+					cmovies: {
+						type: Array,
+						default() {
+							return []
+						}
+					}
+				},
+				data() {
+					return {
+						selectIndex: 0,
+					}
+				},
+				methods: {
+					changeColor(index) {
+						this.selectIndex = index
+					},
+					
+					isActive(index) {
+						return this.selectIndex === index
+					}
+				},
+				components: {
+					'child-cpn2': childCpn2
+				}
+			}
+			
+			// root 父组件
+			const app = new Vue({
+				el: '#app',
+				data: {
+					movies: ['东邪西毒', '东方不败', '喜剧之王', '功夫']
+				},
+				// 子组件
+				components: {
+					'child-cpn': childCpn
+				}
+			})
+		</script>
+	</body>
+</html>
