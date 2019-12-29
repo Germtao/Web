@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<my-cpn></my-cpn>
+		</div>
+		
+		<template id="cpt">
+			<div>
+				<h2>计数器：{{counter}}</h2>
+				<button type="button" @click="increment">+</button>
+				<button type="button" @click="decrement" :disabled="counter <= 0">-</button>
+			</div>
+		</template>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<script type="text/javascript">
+			
+			Vue.component('my-cpn', {
+				template: '#cpt',
+				data() {
+					return {
+						counter: 0
+					}
+				},
+				methods: {
+					increment() {
+						this.counter++
+					},
+					
+					decrement() {
+						this.counter--
+					}
+				}
+			})
+			
+			const app = new Vue({
+				el: '#app',
+			})
+		</script>
+		
+	</body>
+</html>
