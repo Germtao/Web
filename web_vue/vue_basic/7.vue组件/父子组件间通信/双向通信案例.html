@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<cpn :number1="num1" :number2="num2" @update-value1="updateValue1" @update-value2="updateValue2"/>
+		</div>
+		
+		<!-- 子组件 -->
+		<template id="cpn">
+			<div>
+				<h3>props: {{number1}}</h3>
+				<h3>data: {{tempNum1}}</h3>
+				<!-- <input type="text" v-model="tempNum1"/> -->
+				<input type="text" :value="tempNum1" @input="textInput1" />
+				<h3>props: {{number2}}</h3>
+				<h3>data: {{tempNum2}}</h3>
+				<input type="text" v-model="tempNum2" @input="textInput2" />
+			</div>
+		</template>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<script type="text/javascript">
+			const app = new Vue({
+				el: '#app',
+				data: {
+					num1: 0,
+					num2: 1
+				},
+				methods: {
+					updateValue1(value) {
+						this.num1 = value
+					},
+					
+					updateValue2(value) {
+						this.num2 = value
+					}
+				},
+				components: {
+					cpn: {
+						template: '#cpn',
+						props: {
+							number1: Number,
+							number2: Number
+						},
+						data() {
+							return {
+								tempNum1: this.number1,
+								tempNum2: this.number2
+							}
+						},
+						methods: {
+							textInput1() {
+								this.tempNum1 = parseInt(event.target.value)
+								this.$emit('update-value1', this.tempNum1)
+								
+								this.tempNum2 = this.tempNum1 * 100
+								this.$emit('update-value2', this.tempNum2)
+							},
+							
+							textInput2() {
+								this.tempNum2 = parseFloat(event.target.value)
+								this.$emit('update-value2', this.tempNum2)
+								
+								this.tempNum1 = this.tempNum2 / 100
+								this.$emit('update-value1', this.tempNum1)
+							}
+						}
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
