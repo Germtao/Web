@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<!-- 1. $children -->
+			<cpn></cpn>
+			<cpn></cpn>
+			<!-- 2. $refs -->
+			<cpn ref="aaa"></cpn>
+			
+			<button type="button" @click="buttonClick">点击弹窗</button>
+		</div>
+		
+		<template id="cpn">
+			<div>
+				<h2>我是子组件</h2>
+			</div>
+		</template>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<script type="text/javascript">
+			const app = new Vue({
+				el: '#app',
+				methods: {
+					buttonClick() {
+						// 1. $children
+						// console.log(this.$children)
+						// this.$children[0].showMessage()
+						
+						// 2. $refs 常用
+						console.log(this.$refs)
+						this.$refs.aaa.showMessage()
+					}
+				},
+				components: {
+					cpn: {
+						template: '#cpn',
+						methods: {
+							showMessage() {
+								console.log('showMessage')
+							}
+						}
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
