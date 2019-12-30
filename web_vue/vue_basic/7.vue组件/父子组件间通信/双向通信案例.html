@@ -15,11 +15,12 @@
 			<div>
 				<h3>props: {{number1}}</h3>
 				<h3>data: {{tempNum1}}</h3>
-				<!-- <input type="text" v-model="tempNum1"/> -->
+				<!-- <input type="text" v-model.number="tempNum1"/> -->
 				<input type="text" :value="tempNum1" @input="textInput1" />
 				<h3>props: {{number2}}</h3>
 				<h3>data: {{tempNum2}}</h3>
-				<input type="text" v-model="tempNum2" @input="textInput2" />
+				<!-- <input type="text" v-model.number="tempNum2"/> -->
+				<input type="text" :value="tempNum2" @input="textInput2" />
 			</div>
 		</template>
 		
@@ -46,12 +47,12 @@
 						template: '#cpn',
 						props: {
 							number1: Number,
-							number2: Number
+							number2: Number,
 						},
 						data() {
 							return {
 								tempNum1: this.number1,
-								tempNum2: this.number2
+								tempNum2: this.number2,
 							}
 						},
 						methods: {
@@ -70,7 +71,18 @@
 								this.tempNum1 = this.tempNum2 / 100
 								this.$emit('update-value1', this.tempNum1)
 							}
-						}
+						},
+						// watch: {
+						// 	tempNum1(newValue) {
+						// 		this.tempNum2 = newValue * 100
+						// 		this.$emit('update-value2', this.tempNum2)
+						// 	},
+							
+						// 	tempNum2(newValue) {
+						// 		this.tempNum1 = newValue / 100
+						// 		this.$emit('update-value1', this.tempNum1)
+						// 	}
+						// }
 					}
 				}
 			})
