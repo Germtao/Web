@@ -6,19 +6,26 @@
 	</head>
 	<body>
 		
-		<div id="app">
+		<div id="app" style="background: red;">
 			<!-- 1. $children -->
-			<cpn></cpn>
-			<cpn></cpn>
+			<!-- <cpn></cpn> -->
 			<!-- 2. $refs -->
 			<cpn ref="aaa"></cpn>
 			
-			<button type="button" @click="buttonClick">点击弹窗</button>
+			<button type="button" @click="buttonClick">父访问子</button>
 		</div>
 		
 		<template id="cpn">
-			<div>
+			<div style="background: #00FFFF;">
+				<h2>我是cpn组件</h2>
+				<ccpn></ccpn>
+			</div>
+		</template>
+		
+		<template id="ccpn">
+			<div style="background: #FFFFFF;">
 				<h2>我是子组件</h2>
+				<button type="button" @click="buttonClick">子访问父</button>
 			</div>
 		</template>
 		
@@ -27,13 +34,17 @@
 		<script type="text/javascript">
 			const app = new Vue({
 				el: '#app',
+				data: {
+					message: 'Hello Vue! 我是根组件'
+				},
 				methods: {
+					// 父访问子
 					buttonClick() {
 						// 1. $children
 						// console.log(this.$children)
 						// this.$children[0].showMessage()
 						
-						// 2. $refs 常用
+						// 2. $refs => 对象 （常用）
 						console.log(this.$refs)
 						this.$refs.aaa.showMessage()
 					}
@@ -41,9 +52,31 @@
 				components: {
 					cpn: {
 						template: '#cpn',
+						data() {
+							return {
+								message: '我是父组件'
+							}
+						},
 						methods: {
 							showMessage() {
 								console.log('showMessage')
+							}
+						},
+						components: {
+							ccpn: {
+								template: '#ccpn',
+								methods: {
+									// 子访问父
+									buttonClick() {
+										// 1. $parent 用的很少
+										console.log(this.$parent)
+										console.log(this.$parent.message)
+										
+										// 2. $root
+										console.log(this.$root)
+										console.log(this.$root.message)
+									}
+								}
 							}
 						}
 					}
