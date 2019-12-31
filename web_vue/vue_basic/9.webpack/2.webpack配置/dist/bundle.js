@@ -391,13 +391,17 @@ function toComment(sourceMap) {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__info_js__ = __webpack_require__(4);
+
+
+var _info = __webpack_require__(3);
+
 // CommonJS导入
-const {add, mul} = __webpack_require__(3)
+var _require = __webpack_require__(4),
+    add = _require.add,
+    mul = _require.mul;
 
 console.log(add(20, 30));
 console.log(mul(30, 30));
@@ -405,52 +409,54 @@ console.log(mul(30, 30));
 // ES6导入
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__info_js__["c" /* name */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__info_js__["a" /* age */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__info_js__["b" /* height */]);
+console.log(_info.name);
+console.log(_info.age);
+console.log(_info.height);
 
 // 依赖css文件
-__webpack_require__(5)
+__webpack_require__(5);
 
 // 依赖less文件
-__webpack_require__(9)
+__webpack_require__(9);
 
 // 写一些东西
-document.writeln('<p>Hello Webpack!</p>')
+document.writeln('<p>Hello Webpack!</p>');
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// ES6导出
+var name = exports.name = 'Kobe Bryant';
+var age = exports.age = 41;
+var height = exports.height = 1.98;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 function add(num1, num2) {
-	return num1 + num2
+	return num1 + num2;
 }
 
 function mul(num1, num2) {
-	return num1 * num2
+	return num1 * num2;
 }
 
 // CommonJS导出
 module.exports = {
-	add, 
-	mul
-}
-
-/***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ES6导出
-const name = 'Kobe Bryant'
-/* harmony export (immutable) */ __webpack_exports__["c"] = name;
-
-const age = 41
-/* harmony export (immutable) */ __webpack_exports__["a"] = age;
-
-const height = 1.98
-/* harmony export (immutable) */ __webpack_exports__["b"] = height;
-
+	add: add,
+	mul: mul
+};
 
 /***/ }),
 /* 5 */
