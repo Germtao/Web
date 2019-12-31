@@ -21,10 +21,23 @@ require('./css/special.less')
 document.writeln('<p>Hello Webpack!</p>')
 
 // 使用 vue 进行开发
- import Vue from 'vue'
- const app = new Vue({
-	 el: '#app',
-	 data: {
-		 message: 'Hello Webpack...'
-	 }
- })
+import Vue from 'vue'
+new Vue({
+	el: '#app',
+	template: `
+		<div>
+			<h2>{{message}}</h2>
+			<button @click="buttonClick">按钮</button>
+			<h2>{{name}}</h2>
+		</div>
+	`,
+	data: {
+	 message: 'Hello Webpack...',
+	 name: 'Hello Vue!'
+	},
+	methods: {
+		buttonClick() {
+			
+		}
+	}
+})

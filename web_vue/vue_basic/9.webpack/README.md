@@ -176,3 +176,37 @@ module.exports = {
 }
 ```
 
+#### 创建Vue时，template和el的关系
+
+```
+new Vue({
+	el: '#app',
+	template: `,
+		<div>
+			<h2>{{message}}</h2>
+			<button @click="buttonClick"></button>
+			<h2>{{name}}</h2>
+		</div>
+	`,
+	data: {
+	 message: 'Hello Webpack...',
+	 name: 'Hello Vue!'
+	},
+	methods: {
+		buttonClick() {
+			
+		}
+	}
+})
+```
+
+> index.html 中的代码
+
+```
+<body>
+		<div id="app">
+			
+		</div>
+		<script src="./dist/bundle.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+```
