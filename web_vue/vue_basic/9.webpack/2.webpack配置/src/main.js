@@ -19,3 +19,12 @@ require('./css/special.less')
 
 // 写一些东西
 document.writeln('<p>Hello Webpack!</p>')
+
+// 使用 vue 进行开发
+ import Vue from 'vue'
+ const app = new Vue({
+	 el: '#app',
+	 data: {
+		 message: 'Hello Webpack...'
+	 }
+ })

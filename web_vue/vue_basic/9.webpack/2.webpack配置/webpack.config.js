@@ -52,5 +52,11 @@ module.exports = {
 				}
 			}
 	  ]
+	},
+	resolve: {
+		// 别名
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js'
+		}
 	}
 }

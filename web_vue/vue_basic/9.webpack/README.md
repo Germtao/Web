@@ -155,3 +155,24 @@ module.exports = {
 ```
 
 > 注: 使用多个loader时, 从右->左加载
+
+## 使用vue的配置过程
+
+`npm install vue --save`
+
+![webpack使用vue配置错误]()
+
+> 解决方案：webpack.config.js中配置
+
+```
+module.exports = {
+	...,
+	resolve: {
+		// 别名
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js'
+		}
+	}
+}
+```
+
