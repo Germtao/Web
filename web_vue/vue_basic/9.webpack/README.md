@@ -74,7 +74,7 @@ gulp.task('js', () =>
 </body>
 ```
 
-#### node 配置 webpack
+#### 1. node 配置 webpack
 
 1. `cd 项目文件夹`
 
@@ -108,9 +108,50 @@ About to write to /Users/qdsg/Documents/Github/web/web_vue/vue_basic/9.webpack/2
 Is this OK? (yes)
 ```
 
-3. 本地安装webpack
+3. 配置package.json
+
+```
+"scripts": {
+	"build": "webpack"
+},
+```
+
+> npm run build
+
+4. 本地安装webpack
 
 ```
 npm install --save-dev webpack
 npm install --save-dev webpack@<version>
 ```
+
+#### 2. 什么是 loader？
+
+`loader`是`webpack`中一个非常核心的概念。包括基本的js代码处理、图片、css加载，还有一些文件的转换。
+
+使用过程：
+
+1. 通过`npm`安装需要使用的`css-loader`: 负责加载css文件
+
+`npm install --save-dev css-loader`
+
+2. 通过`npm`安装需要使用的`style-loader`: 负责将样式添加到 DOM 中
+
+`npm install --save-dev style-loader`
+
+3. 在`webpack.config.js`中的`module`关键字下进行配置
+
+```
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      }
+    ]
+  }
+}
+```
+
+> 注: 使用多个loader时, 从右->左加载
