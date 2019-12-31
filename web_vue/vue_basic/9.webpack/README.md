@@ -60,3 +60,57 @@ gulp.task('js', () =>
 - `grunt/gulp`更加强调的是前端流程的自动化，模块化不是它的核心。
 
 - `webpack`更强调模块化开发管理，而文件压缩合并、预处理等功能，是它附带的功能。
+
+## Webpack的使用
+
+1. `cd 项目文件夹`
+
+2. `webpack ./src/main.js ./dist/bundle.js`
+
+3. 引用	
+```
+<body>
+	<script src="./dist/bundle.js" type="text/javascript" charset="utf-8"></script>
+</body>
+```
+
+#### node 配置 webpack
+
+1. `cd 项目文件夹`
+
+2. npm init
+
+```
+package name: (2.webpack配置) meetwebpack
+version: (1.0.0)
+description:
+entry point: (webpack.config.js) index.js
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to /Users/qdsg/Documents/Github/web/web_vue/vue_basic/9.webpack/2.webpack配置/package.json:
+
+{
+  "name": "meetwebpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes)
+```
+
+3. 本地安装webpack
+
+```
+npm install --save-dev webpack
+npm install --save-dev webpack@<version>
+```
