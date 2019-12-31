@@ -13,3 +13,9 @@ console.log(height);
 
 // 依赖css文件
 require('./css/normal.css')
+
+// 依赖less文件
+require('./css/special.less')
+
+// 写一些东西
+document.writeln('<p>Hello Webpack!</p>')
