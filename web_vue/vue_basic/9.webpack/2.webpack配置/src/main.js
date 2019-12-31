@@ -22,22 +22,35 @@ document.writeln('<p>Hello Webpack!</p>')
 
 // 使用 vue 进行开发
 import Vue from 'vue'
+
+// 创建一个组件
+// const App = {
+// 	template: `
+// 		<div>
+// 			<h2>{{message}}</h2>
+// 			<button @click="buttonClick">按钮</button>
+// 			<h2>{{name}}</h2>
+// 		</div>
+// 	`,
+// 	data() {
+// 		return {
+// 			message: 'Hello Webpack...',
+// 			name: 'Hello Vue!'
+// 		}
+// 	},
+// 	methods: {
+// 		buttonClick() {
+			
+// 		}
+// 	}
+// }
+// import App from './vue/app.js'
+import App from './vue/App.vue'
+
 new Vue({
 	el: '#app',
-	template: `
-		<div>
-			<h2>{{message}}</h2>
-			<button @click="buttonClick">按钮</button>
-			<h2>{{name}}</h2>
-		</div>
-	`,
-	data: {
-	 message: 'Hello Webpack...',
-	 name: 'Hello Vue!'
-	},
-	methods: {
-		buttonClick() {
-			
-		}
+	template: '<App/>',
+	components: {
+		App
 	}
 })

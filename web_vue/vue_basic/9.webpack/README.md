@@ -210,3 +210,44 @@ new Vue({
 		<script src="./dist/bundle.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 ```
+
+#### Vue终极使用方案
+
+> 创建.vue文件封装组件
+
+```
+<template>
+	<div>
+		<h2 class="title">{{message}}</h2>
+		<button @click="buttonClick">按钮</button>
+		<h2>{{name}}</h2>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'App',
+		data() {
+			return {
+				message: 'Hello Webpack...',
+				name: 'Hello Vue!'
+			}
+		},
+		methods: {
+			buttonClick() {
+				
+			}
+		}
+	}
+</script>
+
+<style>
+	.title {
+		color: #008000;
+	}
+</style>
+```
+
+> 需要安装`vue-loader`和`vue-template-compiler`
+
+`npm install vue-loader vue-template-compiler --save-dev`
