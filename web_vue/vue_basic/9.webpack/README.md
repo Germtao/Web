@@ -295,3 +295,24 @@ module.exports = {
 	] 
 }
 ```
+
+#### 3. 压缩js的plugin
+
+该插件使用`uglify-js`压缩`JavaScript`。
+
+- 1. 安装`uglifyjs-webpack-plugin` @1.1.1指定版本，和CLI2保持一致
+
+`npm install uglifyjs-webpack-plugin@1.1.1 --save-dev`
+
+- 2. webpack.config.js中配置
+
+```
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+module.exports = {
+	...
+	plugins: [
+		...
+		new UglifyJsPlugin()
+	] 
+}
+```
