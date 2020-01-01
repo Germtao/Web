@@ -61,7 +61,7 @@ gulp.task('js', () =>
 
 - `webpack`更强调模块化开发管理，而文件压缩合并、预处理等功能，是它附带的功能。
 
-## Webpack的使用
+## 2. Webpack的使用
 
 1. `cd 项目文件夹`
 
@@ -156,7 +156,7 @@ module.exports = {
 
 > 注: 使用多个loader时, 从右->左加载
 
-## 使用vue的配置过程
+## 3. 使用vue的配置过程
 
 `npm install vue --save`
 
@@ -252,7 +252,7 @@ new Vue({
 
 `npm install vue-loader vue-template-compiler --save-dev`
 
-## Plugin
+## 4. Plugin
 
 #### 1. plugin的基本使用
 
@@ -316,3 +316,12 @@ module.exports = {
 	] 
 }
 ```
+
+## 5. 搭建本地服务器
+
+`webpack`提供了一个可选的本地开发服务器，基于`node.js`搭建，内部使用`express`框架，可以实现浏览器热更新。
+
+1. 需要先安装 @2.9.3指定版本，和CLI2保持一致
+
+`npm install webpack-dev-server --save-dev`
+
