@@ -331,3 +331,107 @@ module.exports = {
 
 `npm install --save-dev webpack-merge`
 
+- 2. 配置文件分离
+
+> webpack.common.js
+
+```
+// Node配置
+const path = require('path')
+
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+module.exports = {
+	entry: './src/main.js',
+	output: {
+		path: path.resolve(__dirname, '../dist'),
+		filename: 'bundle.js',
+	},
+	module: {
+		rules: [
+			{
+				test: /\.(css|less)$/,
+				use: [{
+						loader: "style-loader" // creates style nodes from JS strings
+				}, {
+						loader: "css-loader" // translates CSS into CommonJS
+				}, {
+						loader: "less-loader" // compiles Less to CSS
+				}]
+			},
+			{
+				test: /\.(png|jpg|gif|jpeg)$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 8192,
+							name: 'assets/[name].[hash:8].[ext]',
+						}
+					},
+				]
+			},
+			{
+				test: /\.js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['es2015']
+					}
+				}
+			},
+			{
+				test: /\.vue$/,
+				use: {
+					loader: 'vue-loader',
+				}
+			}
+	  ]
+	},
+	resolve: {
+		// 别名
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js'
+		}
+	},
+	plugins: [
+		// webpack自带plugin
+		new webpack.BannerPlugin('最终版权归TT所有'),
+		new HtmlWebpackPlugin({
+			template: 'index.html'
+		}),
+	],
+}
+```
+
+- webpack.dev.js
+
+```
+// 开发配置
+const merge = require('webpack-merge')
+const common = require('./webpack.common.js')
+
+module.exports = merge(common, {
+	devServer: {
+		contentBase: './dist',
+		inline: true
+	}
+})
+```
+
+- webpack.prod.js
+
+```
+// 生产配置
+const merge = require('webpack-merge')
+const common = require('./webpack.common.js')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
+module.exports = merge(common, {
+	plugins: [
+		new UglifyJsPlugin()
+	],
+})
+```
