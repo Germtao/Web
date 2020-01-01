@@ -321,7 +321,13 @@ module.exports = {
 
 `webpack`提供了一个可选的本地开发服务器，基于`node.js`搭建，内部使用`express`框架，可以实现浏览器热更新。
 
-1. 需要先安装 @2.9.3指定版本，和CLI2保持一致
+> 需要先安装 @2.9.3指定版本，和CLI2保持一致
 
 `npm install webpack-dev-server --save-dev`
+
+## 6. 配置文件环境（生产、开发）分离
+
+- 1. 需先安装`webpack-merge`
+
+`npm install --save-dev webpack-merge`
 
