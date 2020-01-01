@@ -251,3 +251,47 @@ new Vue({
 > 需要安装`vue-loader`和`vue-template-compiler`
 
 `npm install vue-loader vue-template-compiler --save-dev`
+
+## Plugin
+
+#### 1. plugin的基本使用
+
+> webpack.config.js 中配置webpack自带 BannerPlugin
+
+```
+const webpack = require('webpack')
+
+module.exports = {
+	// ...
+	plugins: [
+		// webpack自带plugin
+		new webpack.BannerPlugin('最终版权归TT所有')
+	] 
+}
+```
+
+#### 2. 打包html的plugin
+
+> 发布项目时，需要将`html`文件打包到`dist`文件夹中，使用`HtmlWebpackPlugin`。
+
+- 自动生成一个`index.html`文件（可以按指定模板来生成）
+
+- 将打包的`js`文件，自动通过`script`标签插入到`body`中
+
+> 安装HtmlWebpackPlugin插件
+
+`npm install --save-dev html-webpack-plugin`
+
+> 修改webpack.config.js中的配置
+
+```
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+module.exports = {
+	...
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: 'index.html' // 指定模板
+		})
+	] 
+}
+```
