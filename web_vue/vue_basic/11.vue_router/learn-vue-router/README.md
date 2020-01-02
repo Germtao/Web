@@ -71,3 +71,32 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 > 前端路由的核心：
 
 改变URL，但是页面不进行整体的刷新
+
+## vue-router
+
+目前前端流行的三大框架，都有自己的路由实现：
+
+- `Angular`：`ngRouter`
+- `React`：`ReactRouter`
+- `Vue`：`vue-router`
+
+#### 1. 定义
+
+`vue-router`是`Vue.js`官方的路由插件，它和`vue.js`是深度集成的，适合用于构建单页面应用。
+
+> 基于路由和组件
+
+- **路由**用于设定访问路径，将路径和组件映射起来。
+- 在`vue-router`的单页面应用中，页面路径的改变就是组件的切换。
+
+#### 2. 安装和使用
+
+1. 安装`vue-router`
+
+`npm install vue-router --save`
+
+2. 在模块化工程中使用
+
+  1. 导入路由对象，并且调用`Vue.use(VueRouter)`
+  2. 创建路由实例，并且传入路由映射配置
+  3. 在`Vue`实例中挂载创建的路由实例
