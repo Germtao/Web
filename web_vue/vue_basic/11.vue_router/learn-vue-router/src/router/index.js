@@ -4,6 +4,7 @@ import Router from 'vue-router'
 
 import Home from '../components/Home'
 import About from '../components/About'
+import User from '../components/User'
 
 // 1. 使用 Vue.use(插件), 安装插件
 Vue.use(Router)
@@ -24,6 +25,10 @@ export default new Router({
     {
       path: '/about',
       component: About
+    },
+    {
+      path: '/user/:userId',
+      component: User
     }
   ],
   // hash改成history
