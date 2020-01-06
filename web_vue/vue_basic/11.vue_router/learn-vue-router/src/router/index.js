@@ -12,6 +12,7 @@ const HomeMessages = () => import('../components/HomeMessages')
 
 const About = () => import('../components/About')
 const User = () => import('../components/User')
+const Profile = () => import('../components/Profile')
 
 // 1. 使用 Vue.use(插件), 安装插件
 Vue.use(Router)
@@ -50,6 +51,10 @@ export default new Router({
     {
       path: '/user/:userId',
       component: User
+    },
+    {
+      path: '/profile',
+      component: Profile
     }
   ],
   // hash改成history
