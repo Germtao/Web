@@ -18,9 +18,7 @@ const Profile = () => import('../components/Profile')
 Vue.use(Router)
 
 // 2. 创建Router对象 并导出
-export default new Router({
-  // 配置路由和组件的映射关系
-  routes: [
+const routes = [
     {
       path: '/',
       // 重定向
@@ -29,6 +27,9 @@ export default new Router({
     {
       path: '/home',
       component: Home,
+      meta: {
+        title: '首页'
+      },
       children: [
         {
           path: '',
@@ -46,20 +47,46 @@ export default new Router({
     },
     {
       path: '/about',
+      meta: {
+        title: '关于'
+      },
       component: About
     },
     {
       path: '/user/:userId',
+      meta: {
+        title: '用户'
+      },
       component: User
     },
     {
       path: '/profile',
+      meta: {
+        title: '档案'
+      },
       component: Profile
     }
-  ],
+  ]
+
+ const router = new Router({
+  // 配置路由和组件的映射关系
+  routes,
   // hash改成history
   mode: 'history',
   linkActiveClass: 'active'
 })
 
+// 前置守卫(guard)
+router.beforeEach((to, from, next) => {
+  // 从from跳转到to
+  document.title = to.matched[0].meta.title
+  next()
+})
+
+// 后置钩子(hook)
+router.afterEach((to, from) => {
+  // ...
+})
+
 // 3. 将Router对象传入到Vue实例中 main.js
+export default router
