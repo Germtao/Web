@@ -30,11 +30,9 @@
       console.log('home activated')
       this.$router.push(this.path)
     },
-    // deactivated() {
-    //   console.log('home deactivated')
-    //   console.log(this.$route.path)
-    //   this.path = this.$route.path
-    // }
+    deactivated() {
+      console.log('home deactivated')
+    },
     beforeRouteLeave(to, from, next) {
       console.log(this.$route.path)
       this.path = this.$route.path

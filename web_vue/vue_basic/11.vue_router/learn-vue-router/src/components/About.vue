@@ -7,7 +7,19 @@
 
 <script>
   export default {
-    name: 'About'
+    name: 'About',
+    created() {
+      console.log('about created')
+    },
+    destroyed() {
+      console.log('about destroyed')
+    },
+    activated() {
+      console.log('about activated')
+    },
+    deactivated() {
+      console.log('about deactivated')
+    }
   }
 </script>
 
