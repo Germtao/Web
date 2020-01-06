@@ -9,7 +9,9 @@
     <!-- <router-link :to="{path: '/profile', query: {name: 'Kobe', age: 40, height: 1.98}}" tag="button" replace="">档案</router-link> -->
     <button @click="profileClick">档案</button>
 
-    <router-view/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
