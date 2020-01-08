@@ -8,11 +8,11 @@
 		
 		<script type="text/javascript">
 			// 使用setTimeout
-			// setTimeout(() => {
+			// 1. setTimeout(() => {
 			// 	console.log('hello world')
 			// }, 1000)
 			
-			// Promise简单使用
+			// 2. Promise简单使用
 			// new Promise((resolve, reject) => {
 			// 	// 第一次网络请求
 			// 	setTimeout(() => {
@@ -52,7 +52,35 @@
 			// 	console.log('hello swift')
 			// })
 			
-			// 什么情况会使用Promise?
+			// 2.1 链式语法
+			new Promise((resolve, reject) => {
+				// 第一次网络请求
+				setTimeout(() => {
+					resolve('aaa')
+				}, 1000)
+			}).then(res => {
+				// 第一次网络请求处理
+				console.log(res + '   hello world')
+				
+				// return Promise.resolve(res + '111')
+				
+				// return Promise.reject('error message')
+				// 或者手动抛出异常
+				throw 'error msg'
+			}).then(res => {
+				// 第二次网络请求处理
+				console.log(res + '   hello Vuejs')
+				
+				// Promise.resolve()简写
+				return res + '222'
+			}).then(res => {
+				// 第三次网络请求处理
+				console.log(res + '   hello swift')
+			}).catch(error => {
+				console.log(error)
+			})
+			
+			// 3. 什么情况会使用Promise?
 			// 一般有异步操作时，使用Promise对这个异步操作进行封装
 			// new -> 构造函数(1. 保存一些状态信息 2. 执行传入的函数)
 			// 在执行传入的回调函数时，会传入两个参数(resolve, reject)，这两个参数本身又是函数
@@ -75,6 +103,21 @@
 				})
 			}).catch(error => {
 				console.log(error)
+			})
+			
+			// 4. all
+			Promise.all([
+				new Promise((resolve, reject) => {
+					setTimeout(() => {
+						resolve({name: 'Kobe', age: 40, height: 1.98})
+					}, 2000)
+				}),
+				
+				new Promise((resolve, reject) => {
+					resolve({name: 'James', age: 35, height: 2.03})
+				}, 1000)
+			]).then(results => {
+				console.log(results)
 			})
 			
 		</script>
