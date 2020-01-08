@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const Home = () => import('../pages/home/Home')
-const Category = () => import('../pages/category/Category')
-const Cart = () => import('../pages/cart/Cart')
-const Profile = () => import('../pages/profile/Profile')
+const Home = () => import('@/pages/home/Home')
+const Category = () => import('@/pages/category/Category')
+const Cart = () => import('@/pages/cart/Cart')
+const Profile = () => import('@/pages/profile/Profile')
 
 // 1. 安装插件
 Vue.use(Router)

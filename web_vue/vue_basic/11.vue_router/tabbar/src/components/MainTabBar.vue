@@ -2,10 +2,10 @@
   <tab-bar>
     <tab-bar-item path="/home" activeColor="#ff0969">
       <template v-slot:item-icon>
-        <img src="../assets/img/tabbar/home.svg" alt="">
+        <img src="@/assets/img/tabbar/home.svg" alt="">
       </template>
       <template v-slot:item-icon-active>
-        <img src="../assets/img/tabbar/home_active.svg" alt="">
+        <img src="@/assets/img/tabbar/home_active.svg" alt="">
       </template>
       <template v-slot:item-text>
         <div>首页</div>
@@ -13,10 +13,10 @@
     </tab-bar-item>
     <tab-bar-item path="/category" activeColor="#ff0969">
       <template v-slot:item-icon>
-        <img src="../assets/img/tabbar/category.svg" alt="">
+        <img src="@/assets/img/tabbar/category.svg" alt="">
       </template>
       <template v-slot:item-icon-active>
-        <img src="../assets/img/tabbar/category_active.svg" alt="">
+        <img src="@/assets/img/tabbar/category_active.svg" alt="">
       </template>
       <template v-slot:item-text>
         <div>分类</div>
@@ -24,10 +24,10 @@
     </tab-bar-item>
     <tab-bar-item path="/cart" activeColor="#ff0969">
       <template v-slot:item-icon>
-        <img src="../assets/img/tabbar/cart.svg" alt="">
+        <img src="@/assets/img/tabbar/cart.svg" alt="">
       </template>
       <template v-slot:item-icon-active>
-        <img src="../assets/img/tabbar/cart_active.svg" alt="">
+        <img src="@/assets/img/tabbar/cart_active.svg" alt="">
       </template>
       <template v-slot:item-text>
         <div>购物车</div>
@@ -35,10 +35,10 @@
     </tab-bar-item>
     <tab-bar-item path="/profile" activeColor="#ff0969">
       <template v-slot:item-icon>
-        <img src="../assets/img/tabbar/profile.svg" alt="">
+        <img src="@/assets/img/tabbar/profile.svg" alt="">
       </template>
       <template #item-icon-active>
-        <img src="../assets/img/tabbar/profile_active.svg" alt="">
+        <img src="@/assets/img/tabbar/profile_active.svg" alt="">
       </template>
       <template v-slot:item-text>
         <div>我的</div>
@@ -48,8 +48,8 @@
 </template>
 
 <script>
-  import TabBar from "./tabbar/TabBar.vue"
-  import TabBarItem from "./tabbar/TabBarItem.vue"
+  import TabBar from "@/components/tabbar/TabBar.vue"
+  import TabBarItem from "@/components/tabbar/TabBarItem.vue"
 
   export default {
     name: 'MainTabBar',
