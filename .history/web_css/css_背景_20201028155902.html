@@ -196,7 +196,7 @@
     </style> -->
 
     <!-- 径向渐变 -->
-    <!-- <style>
+    <style>
         div {
             width: 250px;
             height: 250px;
@@ -211,67 +211,14 @@
             中心点位置：at  left  right  center bottom  top
         */
 
-        /* 辐射半径为100px，中心点在中间 */
+        /*辐射半径为100px，中心点在中间*/
         div:nth-child(1) {
-            /* background-image: radial-gradient(100px at center, yellow, green); */
-            width: 200px;
-            height: 200px;
-            margin: 40px auto;
-            border-radius: 100px;
-            background-color: yellowgreen;
+            background-image: radial-gradient(100px at center, yellow, green);
         }
 
         /* 中心点在左上角 */
         div:nth-child(3) {
             background-image: radial-gradient(at left top, yellow, green);
-        }
-
-        div:nth-child(2) {
-            /* background-image: radial-gradient(at 50px 50px, yellow, green); */
-            width: 200px;
-            height: 200px;
-            margin: 40px auto;
-            border-radius: 100px;
-            background-color: yellowgreen;
-            background-image: radial-gradient(200px at 100px 100px,
-                    rgba(0, 0, 0, 0),
-                    rgba(0, 0, 0, 0.5));
-        }
-
-        /* 设置不同的颜色渐变 */
-        div:nth-child(4) {
-            background-image: radial-gradient(100px at center,
-                    yellow 0%,
-                    green 30%,
-                    blue 60%,
-                    red 100%);
-        }
-
-        /* 如果辐射半径的宽高不同，那就是椭圆 */
-        div:nth-child(5) {
-            background-image: radial-gradient(100px 50px at center,
-                    yellow,
-                    green);
-        }
-    </style> -->
-
-    <!-- clip-path：裁剪出元素的部分区域做展示 -->
-    <style>
-        .div1 {
-            width: 320px;
-            height: 320px;
-            border: 1px solid red;
-            background: url(http://img.smyhvae.com/20191006_1410.png) no-repeat;
-            background-size: cover;
-
-            /* 裁剪出圆形区域 */
-            clip-path: circle(50px at 100px 100px);
-            transition: clip-path .4s;
-        }
-
-        .div1:hover {
-            /* 鼠标悬停时，裁剪出更大的圆形 */
-            clip-path: circle(80px at 100px 100px);
         }
     </style>
 
@@ -334,14 +281,11 @@
     </div> -->
 
     <!-- 径向渐变 -->
-    <!-- <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
-    <div class="box"></div> -->
-
-    <!-- clip-path：裁剪出元素的部分区域做展示 -->
-    <div class="div1"></div>
+    <div class="box"></div>
+    <div class="box"></div>
 
     <!-- 视觉差效果 -->
     <!-- <div id="div1"></div>
