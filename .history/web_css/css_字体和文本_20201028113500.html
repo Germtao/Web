@@ -5,8 +5,16 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>css属性 - 字体和文本</title>
+     <title>css - 字体和文本</title>
      <style>
+          div {
+               width: 100px;
+               height: 100px;
+               background-color: #00cc66;
+               margin-right: 100px;
+               float: left;
+          }
+
           h1 {
                /* font-family: Georgia, serif; */
                text-align: center;
@@ -99,33 +107,18 @@
                text-align: center;
           }
 
-          /* overflow属性：超出范围的内容要怎么处理 */
+          /*  */
           #div1 {
-               width: 100px;
-               height: 100px;
-               background-color: #00cc66;
-               margin-right: 100px;
-               float: left;
                /*超出的部分让浏览器自行解决*/
                overflow: auto;
           }
 
           #div2 {
-               width: 100px;
-               height: 100px;
-               background-color: #00cc66;
-               margin-right: 100px;
-               float: left;
                /*超出的部分会显示出来*/
                overflow: visible;
           }
 
           #div3 {
-               width: 100px;
-               height: 100px;
-               background-color: #00cc66;
-               margin-right: 100px;
-               float: left;
                /*超出的部分将剪切掉*/
                overflow: hidden;
           }
@@ -133,11 +126,6 @@
 </head>
 
 <body>
-     <!-- overflow属性：超出范围的内容要怎么处理 -->
-     <div id="div1">其实很简单 其实很自然 两个人的爱由两人分担 其实并不难 是你太悲观 隔着一道墙不跟谁分享 不想让你为难 你不再需要给我个答案</div>
-     <div id="div2">其实很简单 其实很自然 两个人的爱由两人分担 其实并不难 是你太悲观 隔着一道墙不跟谁分享 不想让你为难 你不再需要给我个答案</div>
-     <div id="div3">其实很简单 其实很自然 两个人的爱由两人分担 其实并不难 是你太悲观 隔着一道墙不跟谁分享 不想让你为难 你不再需要给我个答案</div>
-
      <h1>这是一段文字</h1>
      <p>这是一段文字</p>
      <h1>This is a text</h1>
@@ -163,6 +151,11 @@
 
      <!-- 对齐方式 -->
      <p class="align">文本对齐方式</p>
+
+     <!-- overflow属性：超出范围的内容要怎么处理 -->
+     <div id="div1">其实很简单 其实很自然 两个人的爱由两人分担 其实并不难 是你太悲观 隔着一道墙不跟谁分享 不想让你为难 你不再需要给我个答案</div>
+     <div id="div2">其实很简单 其实很自然 两个人的爱由两人分担 其实并不难 是你太悲观 隔着一道墙不跟谁分享 不想让你为难 你不再需要给我个答案</div>
+     <div id="div3">其实很简单 其实很自然 两个人的爱由两人分担 其实并不难 是你太悲观 隔着一道墙不跟谁分享 不想让你为难 你不再需要给我个答案</div>
 
      <!-- 例子 -->
      <div>
