@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css-案例demo</title>
+
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 14px;
+      font-family: "Microsoft YaHei", "SimSun";
+      height: 8888px;
+    }
+
+    /* 清除浮动的影响 */
+    .cl {
+      clear: both;
+    }
+
+    .header {
+      height: 58px;
+      background-color: #191D3A;
+    }
+
+    /* 版心 */
+    .inner_c {
+      width: 1000px;
+      /* 让导航条、内容区域等部分的版心居中 */
+      margin: 0 auto;
+    }
+
+    .header .logo {
+      float: left;
+      margin-right: 40px;
+    }
+
+    .header .nav {
+      float: left;
+    }
+
+    .header .nav ul {
+      /* 去掉列表前面的圆点 */
+      list-style: none;
+    }
+
+    .header .nav ul li {
+      float: left;
+      width: 100px;
+      line-height: 58px;
+      /* 每个li之间有间隔线 */
+      border-left: 1px solid #252947;
+    }
+
+    .header .nav ul li.last {
+      border-right: 1px solid #252947;
+    }
+
+    .header .nav ul li a {
+      /* 将超链接转为块儿，可以保证其霸占父亲的整行 */
+      display: block;
+      height: 58px;
+      text-decoration: none;
+      color: #818496;
+      text-align: center;
+    }
+
+    .header .nav ul li a.current {
+      color: white;
+      background: #252947;
+    }
+
+    .header .nav ul li a:hover {
+      color: white;
+      background: #252947;
+    }
+
+    .header .jrwm_box {
+      float: left;
+      height: 58px;
+      width: 100px;
+      padding-left: 48px;
+      padding-top: 12px;
+    }
+
+    .header .jrwm_box .jrwm {
+      height: 34px;
+      background-image: url();
+      background-repeat: no-repeat;
+      text-align: center;
+    }
+
+    .header .jrwm_box .jrwm a {
+      display: block;
+      line-height: 34px;
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="inner_c">
+      <div class="logo">
+        <img src="" alt="">
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="#" class="current">首页</a></li>
+          <li><a href="#">博雅游戏</a></li>
+          <li><a href="#">博雅新闻</a></li>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">客服中心</a></li>
+          <li class="last"><a href="#">投资者关系</a></li>
+        </ul>
+      </div>
+      <div class="jrwm_box">
+        <div class="jrwm">
+          <a href="https://www.baidu.com" target="_blank">加入我们</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 在导航条和banner之间隔一堵墙 -->
+  <div class="cl"></div>
+
+  <div class="banner"></div>
+
+  <!-- 内容区域 -->
+  <div class="content inner_c">
+    <div class="product">
+      <ul>
+        <li>
+          <p><img src="img/倪妮.jpg" alt=""></p>
+          <h3>倪妮</h3>
+          <p class="djxh">
+            <a href="#">点击喜欢</a>
+          </p>
+        </li>
+        <li>
+          <p><img src="img/宋轶.jpeg" alt=""></p>
+          <h3>宋轶</h3>
+          <p class="djxh">
+            <a href="#">点击喜欢</a>
+          </p>
+        </li>
+        <li>
+          <p><img src="img/李沁.jpg" alt=""></p>
+          <h3>李沁</h3>
+          <p class="djxh">
+            <a href="#">点击喜欢</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
