@@ -30,46 +30,7 @@
   </style> -->
 
   <!-- 绝对定位：定义横纵坐标。原点在父容器的左上角或左下角。横坐标用left表示，纵坐标用top或者bottom表示 -->
-  <style type="text/css">
-    .box {
-      /* 居中 */
-      margin: 0 auto;
-      width: 308px;
-      height: 307px;
-      border: 1px solid #FF7E00;
-      /* 子绝父相 */
-      position: relative;
-    }
 
-    .box .image img {
-      width: 308px;
-      height: 196px;
-    }
-
-    .box .dtc {
-      /*转为块级元素，才能设置span的宽高*/
-      display: block;
-      width: 52px;
-      height: 28px;
-      background-image: url(http://img.smyhvae.com/20180116_1115.png);
-      /* 这里用到了精灵图 */
-      background-position: -108px 0px;
-      /* 采用绝对定位的方式，将精灵图盖在最上层 */
-      position: absolute;
-      top: -9px;
-      left: 13px;
-    }
-
-    .box h4 {
-      background-color: black;
-      color: white;
-      width: 308px;
-      height: 40px;
-      line-height: 40px;
-      position: absolute;
-      top: 156px;
-    }
-  </style>
 </head>
 
 <body>
