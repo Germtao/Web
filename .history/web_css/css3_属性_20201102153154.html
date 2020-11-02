@@ -40,24 +40,6 @@
     .tu {
       text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
     }
-
-    .box {
-      width: 500px;
-      height: 200px;
-      margin: 20px auto;
-      border: 2px solid red;
-      /* 没有添加私有前缀，属性无效 */
-      /* background: linear-gradient(left, green, yellow); */
-
-      /* 谷歌 苹果 */
-      background: -webkit-linear-gradient(left, green, yellow);
-      /* 火狐 */
-      background: -moz-linear-gradient(left, green, yellow);
-      /* 欧朋 */
-      background: -o-linear-gradient(left, green, yellow);
-      /* IE */
-      /* background: -ms-linear-gradient(left, green, yellow); */
-    }
   </style>
 </head>
 
@@ -68,7 +50,6 @@
   <div class="tu">身又岂能由己</div>
 
   <!-- 处理兼容性问题：私有前缀 -->
-  <div class="box"></div>
 </body>
 
 </html>
