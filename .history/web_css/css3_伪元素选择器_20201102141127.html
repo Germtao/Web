@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3-伪元素选择器</title>
+  <!-- 伪元素选择器的标志性符号是 :: -->
+  <style>
+    /* ::before 和::after 是通过 css 模拟出的html标签的效果 */
+    span::before {
+      content: "smyhvae";
+      color: red;
+      background-color: pink;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+    }
+
+    span::after {
+      content: "永不止步";
+      color: yellowgreen;
+    }
+
+    /* 给原本的span标签设置一个默认的属性 */
+    span {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <span>伪元素选择器</span>
+
+  <ul>
+    <li>as long as you try very hard, you can achieve anything</li>
+    <li>只要功夫深，铁杵磨成针</li>
+    <li>一生懸命頑張れば何でも達成できます</li>
+  </ul>
+</body>
+
+</html>
