@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3-动画</title>
+
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      margin: 100px auto;
+
+      /* 只让宽度在变化时进行过渡 */
+      /* transition: width 2s linear 0s; */
+
+      /* 宽度、背景色在变化时，进行过渡 */
+      transition: all 2s linear 0s;
+    }
+
+    .box:hover {
+      width: 500px;
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>
