@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3-动画案例</title>
+
+  <!-- 1. 🚀 -->
+  <!-- <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #DE8910;
+    }
+
+    .rocket {
+      position: absolute;
+      left: 100px;
+      top: 600px;
+      height: 120px;
+      transform: translate(-200px, 200px) rotate(45deg);
+      transition: all 1s ease-in;
+    }
+
+    body:hover .rocket {
+      transform: translate(500px, -500px) rotate(45deg);
+    }
+  </style> -->
+
+  <!-- 2. 卡片旋转 -->
+  <style>
+    body {
+      background-color: #eee;
+    }
+
+    .box {
+      width: 300px;
+      height: 440px;
+      margin: 100px auto;
+      position: relative;
+    }
+
+    img {
+      width: 100px;
+      /* 既然卡片是叠在一起的，那就都用绝对定位 */
+      position: absolute;
+      left: 0;
+      top: 0;
+      box-shadow: 0 0 3px #666;
+
+      transition: all 1.5s;
+      /* 旋转时，以盒子底部的中心为坐标原点 */
+      transform-origin: center bottom;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1. 🚀 -->
+  <!-- <img class="rocket" src="img/rocket.png" alt=""> -->
+
+  <!-- 2. 卡片旋转 -->
+  <div class="box">
+    <img src="img/倪妮.jpg" alt="">
+    <img src="img/宋轶.jpeg" alt="">
+    <img src="img/倪妮.jpg" alt="">
+    <img src="img/宋轶.jpeg" alt="">
+    <img src="img/倪妮.jpg" alt="">
+    <img src="img/宋轶.jpeg" alt="">
+    <img src="img/倪妮.jpg" alt="">
+    <img src="img/宋轶.jpeg" alt="">
+    <img src="img/倪妮.jpg" alt="">
+    <img src="img/宋轶.jpeg" alt="">
+    <img src="img/倪妮.jpg" alt="">
+  </div>
+</body>
+
+</html>
