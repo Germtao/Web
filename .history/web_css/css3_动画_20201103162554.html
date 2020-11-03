@@ -304,19 +304,9 @@
 
       /* 调用动画
         animation: 动画名称 持续时间  执行次数  是否反向  运动曲线 延迟执行。infinite 表示无限次
-        animation: move 1s  alternate(反向) linear 3;
+        animation: move 1s  alternate linear 3;
        */
-      /* animation: move1 1s alternate linear 3; */
-      animation: move2 4s infinite;
-    }
-
-    .my-clock {
-      width: 3px;
-      height: 200px;
-      background-color: #000;
-      margin: 100px auto;
-      transform-origin: center bottom;
-      animation: clockAnim 60s steps(60) infinite;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     }
 
     /* 定义动画：1 */
@@ -354,22 +344,7 @@
       }
 
       /* 动画执行到 100% 的时候，背景色还原为红色，形状还原为正方形 */
-      100% {
-        transform: translateX(0px) translateY(0px);
-        background-color: red;
-        border-radius: 0;
-      }
-    }
-
-    /* 时钟 */
-    @keyframes clockAnim {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
+      100% {}
     }
   </style>
 </head>
@@ -427,7 +402,6 @@
 
   <!-- 动画 -->
   <div class="box"></div>
-  <div class="my-clock"></div>
 </body>
 
 </html>

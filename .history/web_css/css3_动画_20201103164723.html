@@ -297,6 +297,7 @@
   <!-- 动画 -->
   <style>
     .box {
+      float: left;
       width: 100px;
       height: 100px;
       margin: 100px;
@@ -310,10 +311,11 @@
       animation: move2 4s infinite;
     }
 
-    .my-clock {
+    .clock {
+      float: left;
       width: 3px;
       height: 200px;
-      background-color: #000;
+      color: #000;
       margin: 100px auto;
       transform-origin: center bottom;
       animation: clockAnim 60s steps(60) infinite;
@@ -427,7 +429,7 @@
 
   <!-- 动画 -->
   <div class="box"></div>
-  <div class="my-clock"></div>
+  <div class="clock"></div>
 </body>
 
 </html>

@@ -310,15 +310,6 @@
       animation: move2 4s infinite;
     }
 
-    .my-clock {
-      width: 3px;
-      height: 200px;
-      background-color: #000;
-      margin: 100px auto;
-      transform-origin: center bottom;
-      animation: clockAnim 60s steps(60) infinite;
-    }
-
     /* 定义动画：1 */
     @keyframes move1 {
       from {
@@ -362,6 +353,16 @@
     }
 
     /* 时钟 */
+    .clock {
+      float: left;
+      width: 3px;
+      height: 200px;
+      color: #000;
+      margin: 100px auto;
+      transform-origin: center bottom;
+      animation: clockAnim 60s steps(60) infinite;
+    }
+
     @keyframes clockAnim {
       0% {
         transform: rotate(0deg);
@@ -427,7 +428,7 @@
 
   <!-- 动画 -->
   <div class="box"></div>
-  <div class="my-clock"></div>
+  <div class="clock"></div>
 </body>
 
 </html>
