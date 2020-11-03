@@ -89,8 +89,7 @@
       margin: 100px auto;
     }
 
-    /* .box div { */
-    .box>div {
+    .box div {
       width: 300px;
       height: 150px;
       background-color: pink;
@@ -101,24 +100,16 @@
       font: 400 30px/150px "宋体";
     }
 
-    /* .box .box2 {
-      background-color: greenyellow;
-      transition: all 1s;
-    } */
-    div:nth-child(2) {
+    .box .box2 {
       background-color: greenyellow;
       transition: all 1s;
     }
 
-    /* .box .box2:hover {
-      background-color: green; */
-    /* 缩放 */
-    /* transform: scale(2, 0.5); */
-    /* } */
-    div:nth-child(2):hover {
+    .box .box2:hover {
       background-color: green;
-      /* 位移 */
-      transform: translate(-50%, 50%);
+      /* 缩放 */
+      /* transform: scale(2, 0.5); */
+      transform: translate(-50%, -50%);
     }
   </style>
 </head>
