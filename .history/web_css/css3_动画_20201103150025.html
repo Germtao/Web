@@ -202,7 +202,7 @@
   </style> -->
 
   <!-- 3D转换: 位移 -->
-  <!-- <style>
+  <style>
     body {
       /* 给box的父元素加透视效果, 为了 Z 效果能显示 */
       perspective: 1000px;
@@ -220,77 +220,6 @@
       /* transform: translateX(100px); */
       /* transform: translateY(100px); */
       transform: translateZ(100px);
-    }
-  </style> -->
-
-  <!-- 3D呈现（transform-style）-->
-  <style>
-    .box {
-      width: 250px;
-      height: 250px;
-      border: 1px dashed red;
-      margin: 100px auto;
-      position: relative;
-      border-radius: 50%;
-
-      /* 让子盒子保持3d效果 */
-      transform-style: preserve-3d;
-
-      /* transform: rotateX(30deg) rotateY(-30deg); */
-      animation: gun 8s linear infinite;
-    }
-
-    .box>div {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      text-align: center;
-      line-height: 250px;
-      font-size: 60px;
-      color: #daa520;
-    }
-
-    .left {
-      background-color: rgba(255, 0, 0, 0.3);
-      /* 变换中心 */
-      transform-origin: left;
-      transform: rotateY(90deg) translateX(-125px);
-    }
-
-    .right {
-      background-color: rgba(0, 0, 255, 0.3);
-      transform-origin: right;
-      transform: rotateY(90deg) translateX(125px);
-    }
-
-    .up {
-      background: rgba(255, 0, 255, 0.3);
-      transform: rotateX(90deg) translateZ(125px);
-    }
-
-    .down {
-      background: rgba(99, 66, 33, 0.3);
-      transform: rotateX(-90deg) translateZ(125px);
-    }
-
-    .forward {
-      background: rgba(255, 255, 0, 0.3);
-      transform: translateZ(125px);
-    }
-
-    .back {
-      background: rgba(0, 255, 255, 0.3);
-      transform: translateZ(-125px);
-    }
-
-    @keyframes gun {
-      0% {
-        transform: rotateX(0deg) rotateY(0deg);
-      }
-
-      100% {
-        transform: rotateX(360deg) rotateY(360deg);
-      }
     }
   </style>
 </head>
@@ -336,7 +265,7 @@
   <!-- 3D转换: 位移 -->
   <!-- <div class="box"></div> -->
 
-  <!-- 3D呈现（transform-style）-->
+  <!-- 3D转换: 位移 -->
   <div class="box">
     <div class="up">上</div>
     <div class="down">下</div>
