@@ -56,16 +56,7 @@
       /* justify-content: flex-start; */
 
       /* 主轴对齐方式：从主轴结束的方向对齐 */
-      /* justify-content: flex-end; */
-
-      /* 主轴对齐方式：居中对齐 */
-      /* justify-content: center; */
-
-      /* 主轴对齐方式：在父盒子中平分 */
-      /* justify-content: space-around; */
-
-      /* 主轴对齐方式：两端对齐 平分 */
-      justify-content: space-between;
+      justify-content: flex-end;
     }
 
     /* 主轴方向 flex-direction:row */
@@ -79,12 +70,16 @@
       display: flex;
       /* 水平翻转 */
       flex-direction: row-reverse;
+      /* 主轴对齐方式：居中对齐 */
+      justify-content: center;
     }
 
     /* 主轴方向 flex-direction: column */
     section:nth-child(5) ul {
       display: flex;
       flex-direction: column;
+      /* 主轴对齐方式：在父盒子中平分 */
+      justify-content: space-around;
     }
 
     /* 主轴方向 flex-direction: column-reverse */
@@ -92,6 +87,8 @@
       display: flex;
       /* 垂直翻转 */
       flex-direction: column-reverse;
+      /* 主轴对齐方式：两端对齐 平分 */
+      justify-content: space-between;
     }
   </style>
 </head>
