@@ -96,7 +96,6 @@
 
     /* 侧轴的对齐方式 */
     section:nth-child(7) ul {
-      display: flex;
       /* 侧轴对齐方式 ：从侧轴开始的方向对齐 */
       /* align-items: flex-start; */
 
@@ -104,13 +103,13 @@
       /* align-items: flex-end; */
 
       /* 侧轴对齐方式 ：居中 */
-      /* align-items: center; */
+      align-items: center;
 
       /* 侧轴对齐方式 ：基线 默认同flex-star */
       /* align-items: baseline; */
 
       /* 侧轴对齐方式 ：拉伸 */
-      align-items: stretch;
+      /* align-items: stretch; */
     }
 
     section:nth-child(7) ul li {
@@ -118,27 +117,6 @@
     }
 
     /* 伸缩比例 */
-    section:nth-child(8) ul {
-      display: flex;
-    }
-
-    section:nth-child(8) ul li:nth-child(1) {
-      flex: 1;
-    }
-
-    section:nth-child(8) ul li:nth-child(2) {
-      flex: 1;
-    }
-
-    section:nth-child(8) ul li:nth-child(3) {
-      flex: 8;
-    }
-
-    section:nth-child(8) ul li:nth-child(4) {}
-
-    section:nth-child(8) ul li:nth-child(5) {
-      flex: 4;
-    }
   </style>
 </head>
 
