@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3-FLEX布局</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body {
+      background-color: #eee;
+      font-family: "Microsoft Yahei";
+      font-size: 22px;
+    }
+
+    h3 {
+      font-weight: normal;
+    }
+
+    section {
+      width: 1000px;
+      margin: 40px auto;
+    }
+
+    ul {
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+
+    ul li {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 10px;
+    }
+
+    section:nth-child(1) {
+      /* 清除浮动 */
+      overflow: hidden;
+    }
+
+    section:nth-child(1) ul li {
+      float: left;
+    }
+
+    /* 设置伸缩盒子 */
+    section:nth-child(2) ul {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h3>传统布局</h3>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>伸缩布局 display: flex</h3>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </section>
+</body>
+
+</html>
