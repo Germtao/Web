@@ -357,15 +357,15 @@
     }
 
     /* 爱心💖 */
-    .item:nth-child(27) .heart {
+    .heart {
       width: 200px;
       height: 300px;
       margin: 100px auto;
       position: relative;
     }
 
-    .item:nth-child(27) .heart::before,
-    .item:nth-child(27) .heart::after {
+    .heart::before,
+    .heart::after {
       content: '左一半';
       width: 100%;
       height: 100%;
@@ -383,9 +383,9 @@
       font-family: "Microsoft Yahei";
     }
 
-    .item:nth-child(27) .heart::after {
+    .heart::after {
       content: '右一半';
-      left: 70px;
+      left: 71px;
       transform: rotate(45deg);
     }
   </style>
@@ -502,9 +502,7 @@
         <div class="border-radius"></div>
       </div>
 
-      <div class="item" data-brief="爱心">
-        <div class="heart"></div>
-      </div>
+      <div class="heart"></div>
     </div>
   </div>
 </body>
