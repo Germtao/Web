@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字符串</title>
+
+  <script type="text/javascript">
+    /* 查找字符串
+    1、indexOf()/lastIndexOf()：获取字符串中指定内容的索引
+    2、search()：获取字符串中指定内容的索引（参数里一般是正则）
+    3、includes()：字符串中是否包含指定的内容
+    4、startsWith()：字符串是否以指定的内容开头
+    */
+
+    // indexOf()/lastIndexOf()
+    const str = 'abcdea';
+    // 给字符查索引(索引值为0,说明字符串以查询的参数为开头)
+    console.log(str.indexOf('c'));
+    console.log(str.lastIndexOf('c'));
+    console.log(str.indexOf('a'));
+    console.log(str.lastIndexOf('a'));
+
+    const name = 'helloworld';
+    console.log(name.indexOf('wo'));
+
+    result = name.indexOf('l', 4);
+    console.log(result);
+
+    // 举例: 
+    var index = name.indexOf('l');
+    var num = 0;
+    while (index !== -1) {
+      console.log(index);
+      num++; // 每打印一次，就计数一次
+      index = name.indexOf('o', index + 1);
+    }
+
+    console.log('l 出现的次数是：' + num);
+
+    // 2. search()
+    console.log(name.search('wo')); // 5
+
+    // 3. includes()
+    console.log(name.includes('wo'));
+    console.log(name.includes('haha'));
+    console.log(name.includes('wo', 6));
+
+    // 4. startsWith()
+    console.log(name.startsWith('h')); // true
+    console.log(name.startsWith('a')); // false
+    console.log(name.startsWith('l', 3)); // true
+    console.log(name.startsWith('c', 3)); // false
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
