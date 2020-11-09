@@ -104,73 +104,9 @@
 
     /* 字符串截取
     1、slice()
-    2、substring()
     */
-
-    // 1. slice() 用的最多
     var str3 = 'helloworld';
-    console.log(str3.slice(2, 5)); // llo 截取时，包左不包右
-    console.log(str3.slice(2));    // lloworld 表示从指定的索引位置开始，截取到最后
-    console.log(str3.slice(-5));   // world 表示从倒数第5个开始，截取到最后
-    console.log(str3.slice(1, -1));// elloworl 表示从第一个截取到倒数第一个
-    console.log(str3.slice(5, 2)); // 表示前面的大，后面的小，返回值为空
-
-    // 2. substring()
-    // substring()不能接受负值作为参数。如果传递了一个负值，则默认使用 0
-    // substring()还会自动调整参数的位置，如果第二个参数小于第一个，则自动交换。比如说， substring(1, 0)相当于截取的是第一个字符
-    console.log(str3.substring(-1));
-    console.log(str3.substring(1, 0));
-
-    // 3. substr()
-    console.log(str3.substr(2, 4)); // llow 从索引值为 2 的字符开始，截取 4 个字符
-    console.log(str3.substr(1));    // elloworld 从指定位置开始，截取到最后
-    console.log(str3.substr(-5));   // world 从倒数第几个开始，截取到最后
-
-    /* String.fromCharCode()
-    根据字符的 Unicode 编码获取字符
-    */
-    var result1 = String.fromCharCode(72);
-    var result2 = String.fromCharCode(20013);
-    console.log(result1); // H
-    console.log(result2); // 中
-
-    /* concat()
-     字符串的连接, 基本不用，直接把两个字符串相加就好
-     */
-    var s1 = 'hello';
-    var s2 = 'world';
-    var r1 = s1.concat(s2);
-    console.log(r1); // helloworld
-
-    /* split()：字符串转换为数组
-    通过指定的分隔符，将一个字符串拆分成一个数组。不会改变原字符串
-    */
-    var str4 = 'he, ll, o, wo, rl, d';
-    var result4 = str4.split(',');
-    console.log(result4); // ["he", " ll", " o", " wo", " rl", " d"]
-
-    var str5 = '鬼迷心窍|helloworld|情歌';
-    console.log('结果1：' + str5.split()); // 无参数，表示：把整个字符串作为一个元素添加到数组中
-    console.log('结果2：' + str5.split('')); // 参数为空字符串，则表示：分隔字符串中每一个字符，分别添加到数组中
-    console.log('结果3：' + str5.split('|')); // 参数为指定字符，表示：用 '|' 分隔字符串。此分隔符将不会出现在数组的任意一个元素中
-
-    /* replace()
-    将字符串中的指定内容，替换为新的内容并返回。不会修改原字符串。
-    */
-    var str6 = 'Today is fine day,today is fine day !';
-    console.log(str6.replace('today', 'tomorrow'));
-
-    /* repeat()：重复字符串
-    将字符串重复指定的次数。会返回新的值，不会修改原字符串。
-    */
-    var str7 = 'hello world';
-    console.log(str7.repeat(2));
-
-    // 举例：模糊字符串的后四位
-    const phone = '13133028888';
-    const mix_phone = phone.slice(0, -4) + '*'.repeat(4);
-    console.log(phone);
-    console.log(mix_phone);
+    console.log(str3.slice(2, 5));
   </script>
 
 </head>
