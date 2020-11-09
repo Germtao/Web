@@ -7,35 +7,7 @@
   <title>for和while</title>
 
   <script type="text/javascript">
-    // 质数：只能被1和它自身整除的数，1不是质数也不是合数，质数必须是大于1的自然数。
-    var num = prompt('请输入一个大于1的整数');
 
-    // 判断这个数是否合法
-    if (num <= 1) {
-      alert('该值不合法！');
-    } else {
-      // 先用flag标志位，来保存当前数的状态
-      // 默认当前数是质数
-      var flag = true;
-
-      // 判断当前数是否为质数
-      // 获取 2~num 之间的数
-      for (var i = 2; i < num; i++) {
-        console.log(i);
-        // 判断 num 是否能被 i 整除
-        if (num % i == 0) {
-          // 如果num能被i整除，则说明num一定不是质数，flag设为false，跳出循环
-          flag = false;
-          break;
-        }
-      }
-
-      if (flag) {
-        alert(num + '是质数！！！');
-      } else {
-        alert('这个数不是质数.');
-      }
-    }
   </script>
 </head>
 

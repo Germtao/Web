@@ -20,21 +20,7 @@
 
       // 判断当前数是否为质数
       // 获取 2~num 之间的数
-      for (var i = 2; i < num; i++) {
-        console.log(i);
-        // 判断 num 是否能被 i 整除
-        if (num % i == 0) {
-          // 如果num能被i整除，则说明num一定不是质数，flag设为false，跳出循环
-          flag = false;
-          break;
-        }
-      }
-
-      if (flag) {
-        alert(num + '是质数！！！');
-      } else {
-        alert('这个数不是质数.');
-      }
+      for (var i = 2, i <= num; i++)
     }
   </script>
 </head>
