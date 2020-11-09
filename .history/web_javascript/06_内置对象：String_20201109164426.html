@@ -67,6 +67,7 @@
     2、str[index]
     3、charCodeAt(index)
     */
+
     var str1 = new String('smyhvae');
 
     // 1. charAr(index)
@@ -84,9 +85,8 @@
     // 打印字符串的占位长度。
     // 提示：一个英文占一个位置，一个中文占两个位置。
     // 思路：判断该字符是否在 0-127 之间（在的话是英文，不在是非英文）。
-    alert(getZFWlength(str2)); // 30
-    alert(str2.length); // 24
-    // 从打印结果可以看出：字符串的长度是 24，但是却占了 30 个字符位（一个中文占两个字符位）。
+    alert(getZFWlength(str2));
+    alert(str2.length);
 
     function getZFWlength(string) {
       // 定义一个计数器

@@ -64,42 +64,13 @@
 
     /* 获取指定位置的字符
     1、charAt(index)
-    2、str[index]
-    3、charCodeAt(index)
     */
-    var str1 = new String('smyhvae');
+
+    var str = new String('smyhvae');
 
     // 1. charAr(index)
-    // 2. str[index]
-    // 上面这个例子一般不用。一般打印数组和 json 的时候用索引，打印 String 不建议用索引。
-    for (var i = 0; i < str1.length; i++) {
-      console.log(str1.charAt(i));
-      console.log(str1[i]);
-    }
-
-    // 3. charCodeAt(index)
-    //    sort();   底层用到了charCodeAt();
-    var str2 = 'I love my country!我爱你中国！';
-
-    // 打印字符串的占位长度。
-    // 提示：一个英文占一个位置，一个中文占两个位置。
-    // 思路：判断该字符是否在 0-127 之间（在的话是英文，不在是非英文）。
-    alert(getZFWlength(str2)); // 30
-    alert(str2.length); // 24
-    // 从打印结果可以看出：字符串的长度是 24，但是却占了 30 个字符位（一个中文占两个字符位）。
-
-    function getZFWlength(string) {
-      // 定义一个计数器
-      var count = 0;
-      for (var i = 0; i < string.length; i++) {
-        // 对每一位字符串进行判断，如果Unicode编码在0-127，计数器+1；否则+2
-        if (string.charCodeAt(i) < 128 && string.charCodeAt(i) >= 0) {
-          count++;
-        } else {
-          count += 2;
-        }
-      }
-      return count;
+    for (var i = 0; i < str.length; i++) {
+      console.log(str.charAt(i));
     }
   </script>
 
