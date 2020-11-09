@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>条件语句</title>
+</head>
+
+<body>
+  <!-- if 语句 -->
+  <!-- <script>
+    // 1. 输入身高体重
+    var height = parseFloat(prompt('请输入身高，单位是米'));
+    var weight = parseFloat(prompt('请输入体重，单位是公斤'));
+
+    // 2. 计算 BMI 指数
+    var BMI = weight / Math.pow(height, 2);
+
+    // 3. if 语句来判断。注意跳楼现象
+    // 写法1: 
+    if (BMI < 18.5) {
+      alert('偏瘦');
+    } else if (BMI < 25) {
+      alert('正常');
+    } else if (BMI < 28) {
+      alert('过重');
+    } else if (BMI < 32) {
+      alert('肥胖');
+    } else {
+      alert('非常肥胖');
+    }
+
+    // 写法2: BMI > 32 开始
+  </script> -->
+
+  <!-- <script>
+    var bianhao = parseInt(prompt('你想加什么油？92/97？'))
+    var sheng = parseFloat(prompt('你想加多少升？'))
+
+    if (bianhao == 92) {
+      if (sheng >= 20) {
+        var price = sheng * 5.9
+      } else {
+        var price = sheng * 6
+      }
+    } else if (bianhao == 97) {
+      if (sheng >= 30) {
+        var price = sheng * 6.95
+      } else {
+        var price = sheng * 7
+      }
+    } else {
+      alert('不好意思，没有整个编号的汽油！')
+    }
+
+    alert('价格是：' + price);
+  </script> -->
+
+  <!-- switch 语句 -->
+  <script>
+    let msg = 'notice';
+
+    switch (msg) {
+      case 'notice':
+        console.log('提示');
+        break;
+      case 'warning':
+        console.log('警告');
+        break;
+      case 'error':
+        console.log('错误');
+        break;
+      default:
+        console.log('默认文案');
+        break;
+    }
+  </script>
+</body>
+
+</html>
